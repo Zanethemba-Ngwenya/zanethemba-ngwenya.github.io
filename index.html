@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+ 
     <header>
         <nav>
             <ul>
@@ -30,22 +32,37 @@
         <img src="my_profile_pic.jpeg" alt="Profile Picture" class="profile-pic">
         <h1>Zanethemba Ngwenya</h1><br>
         <h2 id="sliding-text"></h2><br>
-
-        <!-- <button class="download-cv">Download CV</button> -->
-        <a href="Zanethemba_Ngwenya_CV.pdf" download class="download-cv">DOWNLOAD CV</a>
-        <button>Contact</button>
     </section>  
+
+    <div id="quote-container">
+        <p id="quote"></p>
+    </div>
+    
+
+    <section class="intros">
+        <a href="Zanethemba_Ngwenya_CV.pdf" class="view-cv" target="_blank">VIEW CV</a>
+        <a href="#contact1" class="contact-btn">Contact</a><br><br>
+    </section>
 
 <!-- </section> -->
     
     <main>
         <section id="about">
-            <br><h2>About Me</h2>
+            <br>
+            <h2>About Me</h2>
 
-            <p>I am a passionate software developer with expertise in Python and Java, and a strong focus on object-oriented programming, distributed systems, and cloud platforms like AWS and Azure.
+            <p>
+                <b>
+                    Hi I'm Zanethemba Ngwenya
+                </b><br>
+            </p>
+            
+            <p>
+                I am a passionate software developer with expertise in Python and Java, and a strong focus on object-oriented programming, distributed systems, and cloud platforms like AWS and Azure.
                 With proven experience in building scalable and efficient solutions, I excel at leveraging modern technologies to deliver high-quality, robust software.                My skill set extends to agile methodologies, database management (including MySQL and PostgreSQL), and the ability to simplify complex technical concepts for diverse teams and stakeholders.
                 I take pride in delivering solutions that not only meet technical requirements but also drive innovation and business value.
-                I thrive in collaborative environments and am always seeking new opportunities to contribute to exciting projects that push the boundaries of technology.</p>
+                I thrive in collaborative environments and am always seeking new opportunities to contribute to exciting projects that push the boundaries of technology.
+            </p>
         </section>
         
         <br><br>
@@ -53,8 +70,10 @@
         <section id="education">
             <h2>Education</h2>
 
-            <p>🎓 WeThinkCode_
-                Full stack Software Engineering· (2023 - 2025)</p>
+            <p><strong>
+                🎓 WeThinkCode_
+                Full stack Software Engineering· (2023 - 2025)
+            </strong></p>
 
                 WeThinkCode is a unique, innovative coding school that empowered me with the skills and mindset to excel in the tech industry. Through a rigorous, project-based curriculum and an emphasis on real-world problem-solving, I gained proficiency in key programming languages, software development methodologies, and collaborative teamwork. The intensive, peer-driven learning environment challenged me to think critically, adapt quickly, and approach complex problems with creativity and precision. Thanks to WeThinkCode, I not only developed strong technical expertise but also cultivated a growth mindset that drives me to continuously learn and innovate.
         
@@ -96,28 +115,27 @@
         
         <section id="projects">
             <br><br>
+
             <h2>Projects</h2>
+            <p><small>Click on a project to view!</small></p>
+            
             <ul>
                 <li>
-                    <a">ToyRobot</a><br>
-                    <a href="https://github.com/ZanethembaN/ToyRobot" target="_blank">View on GitLab</a>
+                    <a href="https://github.com/ZanethembaN/ToyRobot" target="_blank" class="view-toy-robot">ToyRobot</a><br>
                 </li>                
                 
                 <li>
-                    <a>PassWordGenerator</a><br>
-                    <a href="https://github.com/ZanethembaN/PassWordGenerator" target="_blank">View on GitLab</a>
+                    <a href="https://github.com/ZanethembaN/PassWordGenerator" target="_blank" class="view-password-generator">PassWordGenerator</a>
                 </li>                
                 
                 <li>
-                    <a>Heart Disease Prediction</a><br>
-                    <a href="https://github.com/ZanethembaN/HeartDiseasePredict" target="_blank">View on GitLab</a>
+                    <a href="https://github.com/ZanethembaN/HeartDiseasePredict" target="_blank" class="view-heart-disease-predict">HeartDiseasePredict</a>
                 </li>                
             </ul>
 
             <br>
-            <!-- <button class="view-more">VIEW MORE</button> -->
 
-            <a href="https://github.com/ZanethembaN?tab=repositories" class="view-more-link">VIEW MORE</a><br><br>
+            <a href="https://github.com/ZanethembaN?tab=repositories" class="view-more-link" target="_blank">VIEW MORE ON GITHUB</a><br><br>
             
         </section>
 
@@ -134,17 +152,23 @@
             </div>        
         </section>
         
+        <a href="#top" class="back-to-top">&#8593;</a>
+
+        
+
     
     </main>
     
     <footer>
-        <p>&copy; 2024 Zanethemba Ngwenya</p>
+        <p>&copy; 2024 Zanethemba Ngwenya | Created with love 💻</p>
         <p>Find me on:
             <a href="https://github.com/ZanethembaN" target="_blank">GitHub</a> |
             <a href="https://www.linkedin.com/in/zanethemba-ngwenya/" target="_blank">LinkedIn</a>
         </p>
 
     </footer> 
+
+
     
     <script src="script.js"></script>
 </body>
