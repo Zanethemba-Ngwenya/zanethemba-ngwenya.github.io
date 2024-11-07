@@ -1,10 +1,15 @@
+/* Global reset to remove body and html default margins/padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%; /* Ensure the body takes the full width */
+}
 
 body {
     margin: 0;
     padding: 0;
-    /* background-color: white; */
     background-color: #FFFFED;
-    /* background-color:#FFFDD0; */
     font-family: monospace;
     color:  #ff8c00;
     line-height: 1.6;
@@ -44,39 +49,16 @@ body {
   
   nav ul li:hover {
     color: orange;
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline; 
     border-radius: 5px;
   }
 
+  
 
-/* Ensure full clickable area for buttons */
-button, .download-cv, .contact-btn {
-  background-color:  #ff8c00;
-  color: #282a35;
-  padding: 12px 30px;  /* Increase the horizontal padding to make button larger */
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
-  margin: 10px;
-  display: inline-block; /* Ensures the button can expand with padding and center */
-  text-align: center;  /* Centers text */
-  width: auto; /* Allow button to adjust based on content */
-}
-
-/* Hover effect on buttons */
-button:hover, .download-cv:hover, .contact-btn:hover {
-  background-color:  #282a35;  /* Dark background color on hover */
-  color: #ff8c00;  /* Change text color */
-  transform: scale(1.05);  /* Slight scale for hover effect */
-}
-
-/* Ensure accessibility with focus */
-button:focus, .download-cv:focus, .contact-btn:focus {
-  outline: 2px solid #ff8c00;
-  outline-offset: 2px;
+button:hover {
+  background-color:  #282a35;  
+  color: #ff8c00;
+  transform: scale(1.05); 
 }
 
   
@@ -93,8 +75,6 @@ button:focus, .download-cv:focus, .contact-btn:focus {
     padding-bottom: 5px;
     margin-bottom: 15px;
   }
-
-  /* Wrapper around the image */
 
   
   .profile-pic {
@@ -130,7 +110,6 @@ button:focus, .download-cv:focus, .contact-btn:focus {
   
   #about {
     margin-left: 70px ;
-    /* text-align: center; */
     color: black;
     padding-left: 20px;
   }
@@ -174,7 +153,6 @@ button:focus, .download-cv:focus, .contact-btn:focus {
   
   #projects {
     margin-left: 70px;
-    color:  #ff8c00;
     padding-left: 20px; 
   }
   
@@ -185,8 +163,7 @@ button:focus, .download-cv:focus, .contact-btn:focus {
   }
   
   
-  
-  button, .download-cv, .contact-btn {
+  button {
     background-color:  #ff8c00;
     color: #282a35;
     padding: 10px 20px;
@@ -199,7 +176,7 @@ button:focus, .download-cv:focus, .contact-btn:focus {
     margin: 10px;
   }
   
-  button:hover, .download-cv:hover, .contact-btn:hover {
+  button:hover{
     background-color:  #ff8c00;
     color: #1f212b;
   }
@@ -214,8 +191,7 @@ button:focus, .download-cv:focus, .contact-btn:focus {
     justify-content: center; 
   }
   
-  #skills ul li,
-  #projects ul li {
+  #skills ul li {
     padding: 10px 15px;
     font-size: 1em;
     color:  #ff8c00;
@@ -224,8 +200,7 @@ button:focus, .download-cv:focus, .contact-btn:focus {
     transition: background-color 0.3s, transform 0.2s;
   }
   
-  #skills ul li:hover,
-  #projects ul li:hover {
+  #skills ul li:hover:hover {
     background-color:  #ff8c00;
     color: #282a35;
     color: #444; 
@@ -270,7 +245,7 @@ button:focus, .download-cv:focus, .contact-btn:focus {
 
 #projects {
     margin-left: 70px;
-    color: #ff8c00;
+    color: orange;
     padding-left: 20px;
 }
 
@@ -280,47 +255,34 @@ button:focus, .download-cv:focus, .contact-btn:focus {
     }
 }
 
-/* Styling for the Projects List */
 #projects ul {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     padding: 0;
     list-style: none;
-    justify-content: center; /* Aligns the project items in the center */
+    justify-content: center; 
 }
 
-/* Individual project item styling */
 #projects ul li {
-    padding: 10px 15px;
     font-size: 1em;
-    color: #ff8c00;
-    background-color: #333;
-    border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s;
-    max-width: 250px; /* Optional: restricts the width of each project item */
-    text-align: center; /* Centers the text inside each project item */
+    max-width: 250px; 
+    text-align: center; 
 }
 
-/* Hover effect for project items */
 #projects ul li:hover {
-    background-color: #ff8c00;
-    /* color: #282a35;
-    color: #444; */
-    transform: scale(1.05); /* Slightly scales the item when hovered */
+    transform: scale(1.05); 
 }
 
-/* Adjusting the links inside the project items */
 #projects ul li a {
     text-decoration: none;
     color: inherit;
 }
 
 #projects ul li a:hover {
-    text-decoration: underline; /* Underlines the link on hover */
+    text-decoration: underline;
 }
-
-/* General Form Styles */
 
 
 .view-more-link {
@@ -339,13 +301,118 @@ button:focus, .download-cv:focus, .contact-btn:focus {
 }
 
 .view-more-link:hover {
+  background-color:  #ff8c00;
+  color: #282a35;
+  color: #444; 
+  transform: scale(1.05);
+}
+
+.contact-btn {
+  background-color: #ff8c00;
+  color: #282a35;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+  margin: 10px;
+}
+
+.contact-btn:hover {
   background-color: #282a35;
   color: #ff8c00;
   transform: scale(1.05);
 }
 
 
-/* Contact Details Section */
+.view-cv {
+  background-color: #ff8c00;
+  color: #282a35;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+  margin: 10px;
+}
+
+.view-cv:hover {
+  background-color: #282a35;
+  color: #ff8c00;
+  transform: scale(1.05);
+}
+
+.view-toy-robot {
+  background-color: #282a35;
+  color: orange;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+  margin: 10px;
+}
+
+.view-toy-robot:hover {
+ background-color: #282a35;
+  color: #ff8c00;
+  transform: scale(1.05);
+}
+
+.view-password-generator {
+  background-color: #282a35;
+  color: orange;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+  margin: 10px;
+}
+
+.view-password-generator:hover {
+ background-color: #282a35;
+  color: #ff8c00;
+  transform: scale(1.05);
+}
+
+.view-heart-disease-predict {
+  background-color: #282a35;
+  color: orange;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+  margin: 10px;
+}
+
+.view-heart-disease-predict:hover {
+  background-color: #282a35;
+  color: #ff8c00;
+  transform: scale(1.05);
+}
+
 
 #contact a {
   color: #ff8c00;
@@ -369,3 +436,37 @@ button:focus, .download-cv:focus, .contact-btn:focus {
   }
 }
 
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px; 
+  height: 50px; 
+  background-color: black; 
+  color: orange;  
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  border-radius: 50%;
+  font-size: 2em; 
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #333; 
+  transform: scale(1.2);
+}
+
+#quote-container {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0; 
+  visibility: hidden;
+}
+
+#quote-container.show {
+  visibility: visible;
+}
