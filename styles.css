@@ -1,167 +1,170 @@
-/* Reset margins and padding for html and body */
+/* Global reset to remove body and html default margins/padding */
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  width: 100%;
+  width: 100%; /* Ensure the body takes the full width */
 }
 
 body {
+    margin: 0;
+    padding: 0;
     background-color: #FFFFED;
     font-family: monospace;
     color:  #ff8c00;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; 
     text-align: center;
-}
-
-/* Ensuring sections aren't too wide on smaller screens */
-section {
-  width: 90%; /* Allow sections to take up 90% of the screen */
-  max-width: 1000px; /* Limit to max width of 1000px on larger screens */
-  margin: 0 auto; /* Center sections */
-  padding: 0 20px; /* Add padding for internal spacing */
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
-}
-
-header {
-  padding: 10px 0;
-  width: 100%;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-nav ul li {
-  padding: 10px 15px;
-  font-size: 1.2em;
-  color: black;
-  transition: color 0.3s, background-color 0.3s;
-}
-
-nav ul li a {
-  color: inherit;
-  text-decoration: none;
-}
-
-nav ul li:hover {
-  color: orange;
-  text-decoration: underline;
-  border-radius: 5px;
-}
-
-/* Add hover effect for buttons */
-button:hover {
-  background-color: #282a35;
-  color: #ff8c00;
-  transform: scale(1.05);
-}
-
-/* Section-specific styles */
-section h2 {
-  color: #ff8c00;
-  font-size: 1.5em;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-}
-
-.profile-pic {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  position: relative;
-  margin-top: -11px;
-}
-
-.intro {
-  position: relative;
-  text-align: center;
-  padding-top: 80px;
-}
-
-.intro h1 {
-  font-size: 2em;
-  font-weight: bold;
-  color: #ff8c00;
-  margin: 0;
-  line-height: 1.2;
-}
-
-.intro h2 {
-  font-weight: bold;
-  color: black;
-  margin: 0;
-  line-height: 1.2;
-}
-
-/* Adjust the sections to move content slightly to the left on mobile */
-#about, #education, #skills, #projects, #contact1 {
-  padding-left: 20px;
-}
-
-@media (max-width: 768px) {
-  section {
-    width: 95%; /* Reduce to 95% of screen width for mobile */
-    padding: 0 10px; /* Less padding for smaller screens */
   }
   
-  #about, #education, #skills, #projects, #contact1 {
-    padding-left: 15px; /* Further reduce padding to ensure more space */
+  header {
+    padding: 10px 0;
+    width: 100%;
   }
-
-  /* Adjust text size for smaller screens */
-  .intro h1 {
-    font-size: 1.5em;
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
   }
-
-  section h2 {
+  
+  nav ul li {
+    padding: 10px 15px;
     font-size: 1.2em;
+    color:  black;
+    transition: color 0.3s, background-color 0.3s;
   }
-
-  /* Adjust the project list for mobile */
-  #projects ul {
-    flex-direction: column; /* Stack items vertically on mobile */
-    align-items: center; /* Center the project items */
-  }
-
-  #projects ul li {
-    max-width: 90%; /* Allow projects to take up more space */
-  }
-
-  /* Style for the "view more" link button */
-  .view-more-link {
-    font-size: 1em;
-    padding: 10px 20px;
-    background-color: #ff8c00;
-    color: #282a35;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  
+  nav ul li a {
+    color: inherit;
     text-decoration: none;
-    display: inline-block;
-    margin: 10px;
+  }
+  
+  nav ul li:hover {
+    color: orange;
+    text-decoration: underline; 
+    border-radius: 5px;
   }
 
-  .view-more-link:hover {
-    background-color: #ff8c00;
+  
+
+button:hover {
+  background-color:  #282a35;  
+  color: #ff8c00;
+  transform: scale(1.05); 
+}
+
+  
+  section {
+    margin-top: 20px;
+    padding: 0 15px;
+    width: 80%; 
+    max-width: 1000px; 
+  }
+  
+  section h2 {
+    color:  #ff8c00;
+    font-size: 1.5em;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+
+  
+  .profile-pic {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    margin-top: -11px; 
+  }
+  
+  
+  .intro {
+    position: relative;
+    text-align: center;
+    padding-top: 80px;
+  }
+  
+  .intro h1 {
+    font-size: 2em; 
+    font-weight: bold; 
+    color:   #ff8c00;
+    margin: 0; 
+    line-height: 1.2; 
+  }
+  
+  .intro h2 {
+    font-weight: bold;
+    color: black; 
+    margin: 0; 
+    line-height: 1.2; 
+  }
+  
+  #about {
+    margin-left: 70px ;
+    color: black;
+    padding-left: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    #about {
+        padding-left: 40px;
+    }
+  }
+
+
+  #education {
+    margin-left: 70px ;
+    color: black;
+    padding-left: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    #education {
+        padding-left: 40px;
+    }
+  }
+
+  section button:hover {
     color: #282a35;
-    transform: scale(1.05);
+    background-color:  #ff8c00;
+    border-radius: 5px;
   }
-
-  /* Contact button styling */
-  .contact-btn {
-    background-color: #ff8c00;
+  
+  #skills {
+    margin-left: 70px ;
+    color: black;
+    padding-left: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    #skills {
+        padding-left: 40px;
+    }
+  }
+  
+  #projects {
+    margin-left: 70px;
+    padding-left: 20px; 
+  }
+  
+  @media (min-width: 768px) {
+  #projects {
+        padding-left: 40px;
+    }
+  }
+  
+  
+  button {
+    background-color:  #ff8c00;
     color: #282a35;
     padding: 10px 20px;
     border: none;
@@ -169,45 +172,301 @@ section h2 {
     font-weight: bold;
     font-size: 1em;
     cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
     margin: 10px;
   }
-
-  .contact-btn:hover {
-    background-color: #282a35;
-    color: #ff8c00;
-    transform: scale(1.05);
+  
+  button:hover{
+    background-color:  #ff8c00;
+    color: #1f212b;
   }
   
-  /* Footer styling for mobile */
-  footer {
-    padding: 15px;
+  #skills ul,
+  #projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+    justify-content: center; 
+  }
+  
+  #skills ul li {
+    padding: 10px 15px;
+    font-size: 1em;
+    color:  #ff8c00;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  #skills ul li:hover:hover {
+    background-color:  #ff8c00;
+    color: #282a35;
+    color: #444; 
+    transform: scale(1.05);
   }
 
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f212b;
+    color:  #ff8c00;
+    font-size: 0.9em;
+    width: 100%;
+  }
+  
+  
   footer a {
-    color: #ff8c00;
+    color:  #ff8c00;
     text-decoration: underline;
   }
-
+  
   footer a:hover {
-    color: #ff8c00;
+    color:  #ff8c00;
   }
+  
+  @media (max-width: 768px) {
+    .intro h1 {
+        font-size: 1.5em;
+    }
+  
+    section h2 {
+        font-size: 1.2em;
+    }
+  
+    #skills ul li,
+    #projects ul li {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+  }
+
+#projects {
+    margin-left: 70px;
+    color: orange;
+    padding-left: 20px;
 }
 
-/* Larger screen adjustments */
 @media (min-width: 768px) {
-  /* Ensure proper spacing on larger screens */
-  #about, #education, #skills, #projects, #contact1 {
-    padding-left: 40px; /* Keep more padding on large screens */
+    #projects {
+        padding-left: 40px;
+    }
+}
+
+#projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+    justify-content: center; 
+}
+
+#projects ul li {
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+    max-width: 250px; 
+    text-align: center; 
+}
+
+#projects ul li:hover {
+    transform: scale(1.05); 
+}
+
+#projects ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#projects ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.view-more-link {
+  background-color: #ff8c00;
+  color: #282a35;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+  margin: 10px;
+}
+
+.view-more-link:hover {
+  background-color:  #ff8c00;
+  color: #282a35;
+  color: #444; 
+  transform: scale(1.05);
+}
+
+.contact-btn {
+  background-color: #ff8c00;
+  color: #282a35;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+  margin: 10px;
+}
+
+.contact-btn:hover {
+  background-color: #282a35;
+  color: #ff8c00;
+  transform: scale(1.05);
+}
+
+
+.view-cv {
+  background-color: #ff8c00;
+  color: #282a35;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+  margin: 10px;
+}
+
+.view-cv:hover {
+  background-color: #282a35;
+  color: #ff8c00;
+  transform: scale(1.05);
+}
+
+.view-toy-robot {
+  background-color: #282a35;
+  color: orange;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+  margin: 10px;
+}
+
+.view-toy-robot:hover {
+ background-color: #282a35;
+  color: #ff8c00;
+  transform: scale(1.05);
+}
+
+.view-password-generator {
+  background-color: #282a35;
+  color: orange;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+  margin: 10px;
+}
+
+.view-password-generator:hover {
+ background-color: #282a35;
+  color: #ff8c00;
+  transform: scale(1.05);
+}
+
+.view-heart-disease-predict {
+  background-color: #282a35;
+  color: orange;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+  margin: 10px;
+}
+
+.view-heart-disease-predict:hover {
+  background-color: #282a35;
+  color: #ff8c00;
+  transform: scale(1.05);
+}
+
+
+#contact a {
+  color: #ff8c00;
+  text-decoration: underline;
+}
+
+#contact a:hover {
+  color: #ff8c00;
+  text-decoration: none;
+}
+
+#contact1 {
+  margin-left: 70px ;
+  color: black;
+  padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+  #contact1 {
+      padding-left: 40px;
   }
 }
 
-/* Styling for back-to-top button */
+
 .back-to-top {
-  bottom: 10px;
-  right: 10px;
-  width: 40px;
-  height: 40px;
-  font-size: 1.5em;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px; 
+  height: 50px; 
+  background-color: black; 
+  color: orange;  
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  border-radius: 50%;
+  font-size: 2em; 
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #333; 
+  transform: scale(1.2);
+}
+
+#quote-container {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0; 
+  visibility: hidden;
+}
+
+#quote-container.show {
+  visibility: visible;
 }
