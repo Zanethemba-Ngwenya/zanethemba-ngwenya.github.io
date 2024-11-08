@@ -65,14 +65,30 @@ section {
     width: 80%; 
     max-width: 1000px; 
 }
-  
-section h2 {
-    color:  #ff8c00;
-    font-size: 1.5em;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+
+/* Adjust "About Me" section for mobile */
+#about, #education, #skills, #projects, #contact1 {
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px; /* Add padding on the right for balance */
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Center align the content */
 }
 
+/* Adjust sections' padding for larger screens */
+@media (min-width: 768px) {
+  #about, #education, #skills, #projects, #contact1 {
+      padding-left: 40px;
+      padding-right: 40px; /* Ensure padding is equal on both sides */
+  }
+}
+
+#about, #education, #skills, #projects {
+    margin-left: 0; /* Remove any unnecessary margin */
+    margin-right: 0; /* Remove any unnecessary margin */
+}
+
+/* Profile picture */
 .profile-pic {
     width: 220px;
     height: 220px;
@@ -103,88 +119,44 @@ section h2 {
     line-height: 1.2; 
 }
 
-/* Adjust "About Me" section for mobile */
-#about, #education, #skills, #projects, #contact1 {
-    margin-left: 0;
-    color: black;
-    padding-left: 20px;
-    text-align: left; /* Align text to the left */
+section h2 {
+    color:  #ff8c00;
+    font-size: 1.5em;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
-/* Adjust sections' padding for larger screens */
-@media (min-width: 768px) {
+/* Adjusting margins and padding for smaller screens */
+@media (max-width: 768px) {
+  section {
+      width: 90%; /* Make sections slightly narrower on smaller screens */
+      margin: 0 auto; /* Center content */
+  }
+
   #about, #education, #skills, #projects, #contact1 {
-      padding-left: 40px;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 15px; /* Slightly reduce padding for mobile */
+      padding-right: 15px; /* Add some padding to avoid content being too tight */
   }
-}
 
-#about {
-    margin-left: 70px;
-}
-
-@media (min-width: 768px) {
-    #about {
-        padding-left: 40px;
-    }
-}
-
-#education {
-    margin-left: 70px;
-    color: black;
-    padding-left: 20px;
-}
-  
-@media (min-width: 768px) {
-    #education {
-        padding-left: 40px;
-    }
-}
-
-section button:hover {
-    color: #282a35;
-    background-color:  #ff8c00;
-    border-radius: 5px;
-}
-
-#skills {
-    margin-left: 70px;
-    color: black;
-    padding-left: 20px;
-}
-
-@media (min-width: 768px) {
-    #skills {
-        padding-left: 40px;
-    }
-}
-
-#projects {
-    margin-left: 70px;
-    padding-left: 20px; 
-}
-
-@media (min-width: 768px) {
-  #projects {
-        padding-left: 40px;
+  section h2 {
+      font-size: 1.3em;
   }
-}
 
-button {
-    background-color:  #ff8c00;
-    color: #282a35;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    margin: 10px;
-}
+  .intro h1 {
+      font-size: 1.5em;
+  }
 
-button:hover {
-    background-color:  #ff8c00;
-    color: #1f212b;
+  #skills ul li,
+  #projects ul li {
+      flex: 1 1 100%;
+      text-align: center;
+  }
+
+  .view-more-link {
+      margin-top: 20px; /* Ensure spacing is correct */
+  }
 }
 
 #skills ul,
@@ -206,11 +178,30 @@ button:hover {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-#skills ul li:hover:hover {
-    background-color:  #ff8c00;
-    color: #282a35;
-    color: #444; 
-    transform: scale(1.05);
+/* Updated "Projects" color scheme */
+#projects ul li {
+    /* padding: 10px 15px; */
+    font-size: 1em;
+    color: #ff8c00; /* Text color matches "Skills" */
+    /* border-radius: 5px; */
+    transition: background-color 0.3s, transform 0.2s;
+    max-width: 250px; 
+    text-align: center; 
+}
+
+#projects ul li:hover {
+    /* background-color: #ff8c00; */
+    /* color: #282a35; */
+    transform: scale(1.05); 
+}
+
+#projects ul li a {
+    text-decoration: none;
+    /* color: inherit; */
+}
+
+#projects ul li a:hover {
+    text-decoration: underline;
 }
 
 footer {
@@ -229,63 +220,6 @@ footer a {
 
 footer a:hover {
     color:  #ff8c00;
-}
-
-@media (max-width: 768px) {
-    .intro h1 {
-        font-size: 1.5em;
-    }
-
-    section h2 {
-        font-size: 1.2em;
-    }
-
-    #skills ul li,
-    #projects ul li {
-        flex: 1 1 100%;
-        text-align: center;
-    }
-}
-
-#projects {
-    margin-left: 70px;
-    color: orange;
-    padding-left: 20px;
-}
-
-@media (min-width: 768px) {
-    #projects {
-        padding-left: 40px;
-    }
-}
-
-#projects ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 0;
-    list-style: none;
-    justify-content: center; 
-}
-
-#projects ul li {
-    font-size: 1em;
-    transition: background-color 0.3s, transform 0.2s;
-    max-width: 250px; 
-    text-align: center; 
-}
-
-#projects ul li:hover {
-    transform: scale(1.05); 
-}
-
-#projects ul li a {
-    text-decoration: none;
-    color: inherit;
-}
-
-#projects ul li a:hover {
-    text-decoration: underline;
 }
 
 /* Styling for individual links/buttons */
@@ -325,8 +259,6 @@ footer a:hover {
   color: #ff8c00;
 }
 
-
-
 /* Adjust contact section for mobile */
 #contact a {
   color: #ff8c00;
@@ -338,15 +270,20 @@ footer a:hover {
   text-decoration: none;
 }
 
+/* Contact Me section alignment */
 #contact1 {
-  margin-left: 70px;
   color: black;
   padding-left: 20px;
+  margin-left: 0; /* Align it to the left */
 }
 
+/* Media Query for larger devices */
 @media (min-width: 768px) {
+  /* Center Contact section for larger devices */
   #contact1 {
-      padding-left: 40px;
+    padding-left: 40px;
+    margin: 0 auto; /* Center the contact section */
+    max-width: 800px; /* Set a max width */
   }
 }
 
@@ -378,3 +315,44 @@ footer a:hover {
   text-decoration: none;
 }
 
+/* Styling for "View More on GitHub" button below Projects */
+.view-more-container {
+  margin-top: 20px;
+  text-align: center; /* Center the button */
+  padding: 20px 0;
+}
+
+/* Style for "View More on GitHub" link */
+.view-more-link {
+  background-color: #ff8c00;
+  color: #282a35;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+/* Hover effect for the "View More on GitHub" button */
+.view-more-link:hover {
+  background-color: #282a35;
+  color: #ff8c00;
+  transform: scale(1.05);
+}
+
+/* Media Query for larger devices to ensure it's centered properly */
+@media (min-width: 768px) {
+  .view-more-container {
+      text-align: center; /* Ensure it's centered */
+      margin-top: 7px; /* Space above the button */
+  }
+  .view-more-link {
+      font-size: 1em; /* Increase font size on larger screens */
+      padding: 2px 5px; /* Increase padding for larger screens */
+  }
+}
