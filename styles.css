@@ -19,41 +19,39 @@ body {
     align-items: center;
     min-height: 100vh; 
     text-align: center;
-  }
+}
   
-  header {
+header {
     padding: 10px 0;
     width: 100%;
-  }
+}
   
-  nav ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center; 
     gap: 20px;
-  }
+}
   
-  nav ul li {
+nav ul li {
     padding: 10px 15px;
     font-size: 1.2em;
     color:  black;
     transition: color 0.3s, background-color 0.3s;
-  }
+}
   
-  nav ul li a {
+nav ul li a {
     color: inherit;
     text-decoration: none;
-  }
+}
   
-  nav ul li:hover {
+nav ul li:hover {
     color: orange;
     text-decoration: underline; 
     border-radius: 5px;
-  }
-
-  
+}
 
 button:hover {
   background-color:  #282a35;  
@@ -61,109 +59,117 @@ button:hover {
   transform: scale(1.05); 
 }
 
-  
-  section {
+section {
     margin-top: 20px;
     padding: 0 15px;
     width: 80%; 
     max-width: 1000px; 
-  }
+}
   
-  section h2 {
+section h2 {
     color:  #ff8c00;
     font-size: 1.5em;
     padding-bottom: 5px;
     margin-bottom: 15px;
-  }
+}
 
-  
-  .profile-pic {
+.profile-pic {
     width: 220px;
     height: 220px;
     border-radius: 50%;
     object-fit: cover;
     position: relative;
     margin-top: -11px; 
-  }
-  
-  
-  .intro {
+}
+
+.intro {
     position: relative;
     text-align: center;
     padding-top: 80px;
-  }
-  
-  .intro h1 {
+}
+
+.intro h1 {
     font-size: 2em; 
     font-weight: bold; 
     color:   #ff8c00;
     margin: 0; 
     line-height: 1.2; 
-  }
-  
-  .intro h2 {
+}
+
+.intro h2 {
     font-weight: bold;
     color: black; 
     margin: 0; 
     line-height: 1.2; 
-  }
-  
-  #about {
-    margin-left: 70px ;
+}
+
+/* Adjust "About Me" section for mobile */
+#about, #education, #skills, #projects, #contact1 {
+    margin-left: 0;
     color: black;
     padding-left: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+/* Adjust sections' padding for larger screens */
+@media (min-width: 768px) {
+  #about, #education, #skills, #projects, #contact1 {
+      padding-left: 40px;
   }
-  
-  @media (min-width: 768px) {
+}
+
+#about {
+    margin-left: 70px;
+}
+
+@media (min-width: 768px) {
     #about {
         padding-left: 40px;
     }
-  }
+}
 
-
-  #education {
-    margin-left: 70px ;
+#education {
+    margin-left: 70px;
     color: black;
     padding-left: 20px;
-  }
+}
   
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     #education {
         padding-left: 40px;
     }
-  }
+}
 
-  section button:hover {
+section button:hover {
     color: #282a35;
     background-color:  #ff8c00;
     border-radius: 5px;
-  }
-  
-  #skills {
-    margin-left: 70px ;
+}
+
+#skills {
+    margin-left: 70px;
     color: black;
     padding-left: 20px;
-  }
-  
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
     #skills {
         padding-left: 40px;
     }
-  }
-  
-  #projects {
+}
+
+#projects {
     margin-left: 70px;
     padding-left: 20px; 
-  }
-  
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
   #projects {
         padding-left: 40px;
-    }
   }
-  
-  
-  button {
+}
+
+button {
     background-color:  #ff8c00;
     color: #282a35;
     padding: 10px 20px;
@@ -174,74 +180,72 @@ button:hover {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     margin: 10px;
-  }
-  
-  button:hover{
+}
+
+button:hover {
     background-color:  #ff8c00;
     color: #1f212b;
-  }
-  
-  #skills ul,
-  #projects ul {
+}
+
+#skills ul,
+#projects ul {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     padding: 0;
     list-style: none;
     justify-content: center; 
-  }
-  
-  #skills ul li {
+}
+
+#skills ul li {
     padding: 10px 15px;
     font-size: 1em;
     color:  #ff8c00;
     background-color: #333;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s;
-  }
-  
-  #skills ul li:hover:hover {
+}
+
+#skills ul li:hover:hover {
     background-color:  #ff8c00;
     color: #282a35;
     color: #444; 
     transform: scale(1.05);
-  }
+}
 
-  
-  footer {
+footer {
     text-align: center;
     padding: 20px;
     background-color: #1f212b;
     color:  #ff8c00;
     font-size: 0.9em;
     width: 100%;
-  }
-  
-  
-  footer a {
+}
+
+footer a {
     color:  #ff8c00;
     text-decoration: underline;
-  }
-  
-  footer a:hover {
+}
+
+footer a:hover {
     color:  #ff8c00;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .intro h1 {
         font-size: 1.5em;
     }
-  
+
     section h2 {
         font-size: 1.2em;
     }
-  
+
     #skills ul li,
     #projects ul li {
         flex: 1 1 100%;
         text-align: center;
     }
-  }
+}
 
 #projects {
     margin-left: 70px;
@@ -284,8 +288,8 @@ button:hover {
     text-decoration: underline;
 }
 
-
-.view-more-link {
+/* Styling for individual links/buttons */
+.view-more-link, .contact-btn, .view-cv {
   background-color: #ff8c00;
   color: #282a35;
   padding: 10px 20px;
@@ -300,16 +304,13 @@ button:hover {
   margin: 10px;
 }
 
-.view-more-link:hover {
-  background-color:  #ff8c00;
-  color: #282a35;
-  color: #444; 
+.view-more-link:hover, .contact-btn:hover, .view-cv:hover, .view-toy-robot:hover, .view-password-generator:hover, .view-heart-disease-predict:hover {
+  background-color: #282a35;
+  color: #ff8c00;
   transform: scale(1.05);
 }
 
-.contact-btn {
-  background-color: #ff8c00;
-  color: #282a35;
+.view-toy-robot, .view-password-generator, .view-heart-disease-predict {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -320,100 +321,13 @@ button:hover {
   display: inline-block;
   transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
   margin: 10px;
-}
-
-.contact-btn:hover {
   background-color: #282a35;
   color: #ff8c00;
-  transform: scale(1.05);
 }
 
 
-.view-cv {
-  background-color: #ff8c00;
-  color: #282a35;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1em;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
-  margin: 10px;
-}
 
-.view-cv:hover {
-  background-color: #282a35;
-  color: #ff8c00;
-  transform: scale(1.05);
-}
-
-.view-toy-robot {
-  background-color: #282a35;
-  color: orange;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1em;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
-  margin: 10px;
-}
-
-.view-toy-robot:hover {
- background-color: #282a35;
-  color: #ff8c00;
-  transform: scale(1.05);
-}
-
-.view-password-generator {
-  background-color: #282a35;
-  color: orange;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1em;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
-  margin: 10px;
-}
-
-.view-password-generator:hover {
- background-color: #282a35;
-  color: #ff8c00;
-  transform: scale(1.05);
-}
-
-.view-heart-disease-predict {
-  background-color: #282a35;
-  color: orange;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1em;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
-  margin: 10px;
-}
-
-.view-heart-disease-predict:hover {
-  background-color: #282a35;
-  color: #ff8c00;
-  transform: scale(1.05);
-}
-
-
+/* Adjust contact section for mobile */
 #contact a {
   color: #ff8c00;
   text-decoration: underline;
@@ -425,7 +339,7 @@ button:hover {
 }
 
 #contact1 {
-  margin-left: 70px ;
+  margin-left: 70px;
   color: black;
   padding-left: 20px;
 }
@@ -435,7 +349,6 @@ button:hover {
       padding-left: 40px;
   }
 }
-
 
 .back-to-top {
   position: fixed;
@@ -453,20 +366,14 @@ button:hover {
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .back-to-top:hover {
-  background-color: #333; 
-  transform: scale(1.2);
+  transform: scale(1.1); 
 }
 
-#quote-container {
-  transition: opacity 0.5s ease-in-out;
-  opacity: 0; 
-  visibility: hidden;
-}
-
-#quote-container.show {
-  visibility: visible;
+.back-to-top a {
+  color: #ff8c00;
+  text-decoration: none;
 }
