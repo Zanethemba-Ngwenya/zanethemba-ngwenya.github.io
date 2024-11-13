@@ -67,7 +67,7 @@ section {
 }
 
 /* Adjust "About Me" section for mobile */
-#about, #education, #skills, #projects, #contact1 {
+#about, #education, #achievements, #skills, #projects, #contact1 {
     color: black;
     padding-left: 20px;
     padding-right: 20px; /* Add padding on the right for balance */
@@ -77,13 +77,13 @@ section {
 
 /* Adjust sections' padding for larger screens */
 @media (min-width: 768px) {
-  #about, #education, #skills, #projects, #contact1 {
+  #about, #education, #achievements #skills, #projects, #contact1 {
       padding-left: 40px;
       padding-right: 40px; /* Ensure padding is equal on both sides */
   }
 }
 
-#about, #education, #skills, #projects {
+#about, #education, #achievements, #skills, #projects {
     margin-left: 0; /* Remove any unnecessary margin */
     margin-right: 0; /* Remove any unnecessary margin */
 }
@@ -133,7 +133,7 @@ section h2 {
       margin: 0 auto; /* Center content */
   }
 
-  #about, #education, #skills, #projects, #contact1 {
+  #about, #education, #achievements #skills, #projects, #contact1 {
       margin-left: 0;
       margin-right: 0;
       padding-left: 15px; /* Slightly reduce padding for mobile */
@@ -157,6 +157,47 @@ section h2 {
   .view-more-link {
       margin-top: 20px; /* Ensure spacing is correct */
   }
+}
+
+#achievements {
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1000px;
+}
+
+#achievements h2 {
+  color: #ff8c00;
+  font-size: 1.5em;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+#achievements ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#achievements ul li {
+  font-size: 1.1em;
+  color: black;
+  margin-bottom: 10px;
+}
+
+#achievements ul li a {
+  color: #ff8c00;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+#achievements ul li a:hover {
+  color: #282a35;
+  text-decoration: none;
 }
 
 #skills ul,
