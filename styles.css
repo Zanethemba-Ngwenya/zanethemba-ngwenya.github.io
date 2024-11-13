@@ -126,6 +126,25 @@ section h2 {
     margin-bottom: 15px;
 }
 
+.curriculum-link {
+  color: #ff8c00; 
+  text-decoration: underline; 
+  font-weight: bold; 
+  transition: color 0.3s, text-decoration 0.3s; 
+  display: inline-block;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.curriculum-link:hover {
+  color: #282a35; 
+  text-decoration: none;
+}
+
+.curriculum-link:focus {
+  outline: 2px solid #ff8c00; 
+}
+
 /* Adjusting margins and padding for smaller screens */
 @media (max-width: 768px) {
   section {
