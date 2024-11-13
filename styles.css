@@ -243,7 +243,7 @@ footer a:hover {
   transform: scale(1.05);
 }
 
-.view-toy-robot, .view-password-generator, .view-heart-disease-predict, .view-retrieve-tasks, view-image-compr, view-code-clinic {
+.view-toy-robot, .view-password-generator, .view-heart-disease-predict, .view-retrieve-tasks, .view-image-compr, .view-code-clinic {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
