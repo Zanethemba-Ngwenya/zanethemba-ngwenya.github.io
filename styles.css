@@ -67,7 +67,7 @@ section {
 }
 
 /* Adjust "About Me" section for mobile */
-#about, #education, #achievements, #skills, #projects, #contact1 {
+#about, #education, #skills, #projects, #contact1 {
     color: black;
     padding-left: 20px;
     padding-right: 20px; /* Add padding on the right for balance */
@@ -77,13 +77,13 @@ section {
 
 /* Adjust sections' padding for larger screens */
 @media (min-width: 768px) {
-  #about, #education, #achievements #skills, #projects, #contact1 {
+  #about, #education, #skills, #projects, #contact1 {
       padding-left: 40px;
       padding-right: 40px; /* Ensure padding is equal on both sides */
   }
 }
 
-#about, #education, #achievements, #skills, #projects {
+#about, #education, #skills, #projects {
     margin-left: 0; /* Remove any unnecessary margin */
     margin-right: 0; /* Remove any unnecessary margin */
 }
@@ -147,30 +147,7 @@ section h2 {
   .intro h1 {
       font-size: 1.5em;
   }
-
-  #achievements ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#achievements ul li {
-  font-size: 1.1em;
-  color: black;
-  margin-bottom: 10px;
-}
-
-#achievements ul li a {
-  color: #ff8c00;
-  text-decoration: underline;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-#achievements ul li a:hover {
-  color: #282a35;
-  text-decoration: none;
-}
+  
   
   #skills ul li,
   #projects ul li {
@@ -227,6 +204,48 @@ section h2 {
 #projects ul li a:hover {
     text-decoration: underline;
 }
+
+
+
+#achievements ul li a {
+  color: #ff8c00;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+#achievements ul li a:hover {
+  color: #282a35;
+  text-decoration: none;
+}
+
+#achievements {
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px; 
+  text-align: left;
+  margin: 0 auto; 
+}
+
+/* Adjust sections' padding for larger screens */
+@media (min-width: 768px) {
+  #achievements {
+    padding-left: 40px;
+    padding-right: 40px; 
+  }
+}
+
+#achievements {
+  margin-left: 0; 
+  margin-right: 0; 
+}
+
+#achievements ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 
 footer {
     text-align: center;
@@ -376,47 +395,6 @@ footer a:hover {
   }
 }
 
-
-
-#achievements ul li a {
-  color: #ff8c00;
-  text-decoration: underline;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-#achievements ul li a:hover {
-  color: #282a35;
-  text-decoration: none;
-}
-
-#achievements {
-  color: black;
-  padding-left: 20px;
-  padding-right: 20px; 
-  text-align: left;
-  margin: 0 auto; 
-}
-
-/* Adjust sections' padding for larger screens */
-@media (min-width: 768px) {
-  #achievements {
-    padding-left: 40px;
-    padding-right: 40px; 
-  }
-}
-
-#achievements {
-  margin-left: 0; 
-  margin-right: 0; 
-}
-
-#achievements ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
 footer a {
   color: #ff8c00;
   text-decoration: none;
@@ -435,4 +413,3 @@ footer a:hover {
   color: #ff8c00;
   transform: scale(1.1);
 }
-
