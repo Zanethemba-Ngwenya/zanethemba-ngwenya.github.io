@@ -348,13 +348,13 @@ footer a:hover {
   }
 }
 
-#contact form {
+#contact1 form {
     flex: 1;
     max-width: 600px;
     margin-left: 20px;
 }
 
-#contact form input, #contact form textarea {
+#contact1 form input, #contact1 form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -363,7 +363,7 @@ footer a:hover {
     font-size: 1rem;
 }
 
-#contact form button {
+#contact1 form button {
     padding: 10px 20px;
     border: none;
     color: #fff;
@@ -372,7 +372,7 @@ footer a:hover {
     border-radius: 5px;
 }
 
-#contact form button:hover {
+#contact1 form button:hover {
     background: #d35400;
 }
 
