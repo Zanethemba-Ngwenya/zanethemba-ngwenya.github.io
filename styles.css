@@ -348,6 +348,35 @@ footer a:hover {
   }
 }
 
+#contact form {
+    flex: 1;
+    max-width: 600px;
+    margin-left: 20px;
+}
+
+#contact form input, #contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact form button {
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#contact form button:hover {
+    background: #d35400;
+}
+
+
 .back-to-top {
   position: fixed;
   bottom: 20px;
