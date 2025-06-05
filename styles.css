@@ -32,6 +32,22 @@ body {
     z-index: 1000;
 }
 
+.sidebar {
+    width: 280px;
+    background: linear-gradient(135deg, var(--neutral-dark), #2c3e50);
+    backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    position: fixed;
+    height: 100vh;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    box-shadow: 4px 0 20px var(--shadow-light);
+    overflow-y: auto; /* Allow scrolling within sidebar if needed */
+    left: 0;
+    top: 0;
+}
+
 .profile-container {
     width: 90px;
     height: 90px;
