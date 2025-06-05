@@ -32,21 +32,6 @@ body {
     z-index: 1000;
 }
 
-.sidebar {
-    width: 280px;
-    background: linear-gradient(135deg, var(--neutral-dark), #2c3e50);
-    backdrop-filter: blur(20px);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    position: fixed;
-    height: 100vh;
-    z-index: 1000;
-    transition: transform 0.3s ease;
-    box-shadow: 4px 0 20px var(--shadow-light);
-    overflow-y: auto; /* Allow scrolling within sidebar if needed */
-    left: 0;
-    top: 0;
-}
 
 .profile-container {
     width: 90px;
@@ -1206,3 +1191,43 @@ textarea.form-control {
 }
 
 
+/* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Increased width */
+    width: 200px;
+    height: 100vh;
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+/* Main Content */
+.main-content {
+    /* Adjusted margin-left to match new sidebar width */
+    margin-left: 200px;
+    width: calc(100% - 200px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .sidebar {
+        /* Increased width for medium screens */
+        width: 130px;
+    }
+
+    .main-content {
+        /* Adjusted margin-left for medium screens */
+        margin-left: 130px;
+        width: calc(100% - 130px);
+    }
+
+    .sidebar-menu a {
+        font-size: 13px; /* Slightly increased font size for better readability */
+    }
+}
