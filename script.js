@@ -1,10 +1,62 @@
-const text = "Software Engineer | Full Stack Engineer | Backend Developer";
-const textElement = document.getElementById("sliding-text");
-const quoteElement = document.getElementById("quote");
-const quoteContainer = document.getElementById("quote-container");
 
-// List of small, random quotes
-const quotes = [
+ // Loading screen transition
+    window.addEventListener('load', () => {
+    const loader = document.querySelector('.loader');
+    setTimeout(() => {
+    loader.classList.add('hidden');
+
+    // Create particles after loading
+    createParticles();
+
+    // Start animations
+    startAnimation();
+
+    // Initialize other components
+    setupIntersectionObserver();
+    setupMobileMenu();
+    setupScrollTop();
+}, 1500);
+});
+
+    // Create floating particles
+    function createParticles() {
+    const particlesContainer = document.getElementById('particles');
+    if (!particlesContainer) return;
+
+    const particleCount = 30;
+
+    for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+
+    // Random size
+    const size = Math.random() * 15 + 5;
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+
+    // Random position
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.top = `${Math.random() * 100}%`;
+
+    // Random animation duration
+    const duration = Math.random() * 20 + 10;
+    particle.style.animationDuration = `${duration}s`;
+
+    // Random delay
+    particle.style.animationDelay = `${Math.random() * 5}s`;
+
+    particlesContainer.appendChild(particle);
+}
+}
+
+    // Text typing effect
+    const text = "Software Engineer | Backend Engineer";
+    const textElement = document.getElementById("sliding-text");
+    const quoteElement = document.getElementById("quote");
+    const quoteContainer = document.getElementById("quote-container");
+
+    // List of quotes
+    const quotes = [
     "Code is like humor. When you have to explain it, it’s bad. – Cory House",
     "Life is what happens when you're busy making other plans. – John Lennon",
     "Don’t watch the clock; do what it does. Keep going. – Sam Levenson",
@@ -50,79 +102,153 @@ const quotes = [
     "The only thing that’s impossible is that which you don’t attempt. – Unknown",
     "Live as if you were to die tomorrow. Learn as if you were to live forever. – Mahatma Gandhi",
     "Success is how high you bounce when you hit bottom. – George S. Patton"
-];
+    ];
 
-
-// Function to display a random quote with smooth transition
-function displayRandomQuote() {
+    // Function to display a random quote
+    function displayRandomQuote() {
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    
-    // Start fading out the current quote
-    fadeOutQuote(() => {
-        // Set the new quote content
-        quoteElement.textContent = randomQuote;
-
-        // Fade in the new quote after the old one has faded out
-        fadeInQuote();
-    });
+    quoteElement.textContent = randomQuote;
+    quoteContainer.classList.add("show");
 }
 
-// Function to fade out the current quote
-function fadeOutQuote(callback) {
-    let opacity = 1;
-    const fadeInterval = setInterval(() => {
-        if (opacity <= 0) {
-            clearInterval(fadeInterval);
-            // Hide the quote container after fade out
-            quoteContainer.style.opacity = 0;
-            if (callback) callback();  // Call the callback to proceed with the next step
-        } else {
-            opacity -= 0.05;
-            quoteContainer.style.opacity = opacity;
-        }
-    }, 50); 
-}
-
-function fadeInQuote() {
-    let opacity = 0;
-    quoteContainer.classList.add("show"); 
-    const fadeInterval = setInterval(() => {
-        if (opacity >= 1) {
-            clearInterval(fadeInterval);
-        } else {
-            opacity += 0.05;
-            quoteContainer.style.opacity = opacity;
-        }
-    }, 50); 
-}
-
-function createSlidingText(element, text) {
+    // Function to create typing effect
+    function createSlidingText(element, text) {
     let i = 0;
-    element.textContent = ""; 
+    element.textContent = "";
 
     const interval = setInterval(() => {
-        element.textContent += text.charAt(i);
-        i++;
-        if (i === text.length) {
-            clearInterval(interval);
-            setTimeout(() => {
-                displayRandomQuote();
-                startQuoteInterval(); 
-            }, 1000); 
-        }
-    }, 100); 
+    element.textContent += text.charAt(i);
+    i++;
+    if (i === text.length) {
+    clearInterval(interval);
+    setTimeout(() => {
+    displayRandomQuote();
+    startQuoteInterval();
+}, 1000);
+}
+}, 100);
 }
 
-function startQuoteInterval() {
+    // Start quote interval
+    function startQuoteInterval() {
     setInterval(() => {
-        displayRandomQuote(); 
-    }, 5000); 
+        quoteContainer.classList.remove("show");
+        setTimeout(() => {
+            displayRandomQuote();
+        }, 500);
+    }, 8000);
 }
 
-function startAnimation() {
-    createSlidingText(textElement, text); 
+    // Start animation
+    function startAnimation() {
+    createSlidingText(textElement, text);
 }
 
-window.onload = function() {
-    startAnimation();
-};
+    // Intersection Observer for animations
+    function setupIntersectionObserver() {
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+    if (entry.isIntersecting) {
+    entry.target.classList.add('visible');
+}
+});
+}, {
+    threshold: 0.1
+});
+
+    // Observe elements
+    document.querySelectorAll('section').forEach(el => observer.observe(el));
+    document.querySelectorAll('.timeline-item').forEach(el => observer.observe(el));
+}
+
+    // Mobile menu toggle
+    function setupMobileMenu() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+});
+}
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.sidebar-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+});
+});
+}
+
+    // Scroll to top button
+    function setupScrollTop() {
+    const scrollButton = document.querySelector('.scroll-top');
+
+    window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 500) {
+    scrollButton.classList.add('visible');
+} else {
+    scrollButton.classList.remove('visible');
+}
+});
+
+    scrollButton.addEventListener('click', () => {
+    window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+});
+});
+}
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+
+            // Update active link
+            document.querySelectorAll('.sidebar-menu a').forEach(link => {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+        }
+    });
+});
+
+    // Highlight active section in sidebar
+    window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.sidebar-menu a');
+
+    let current = '';
+
+    sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+    current = section.getAttribute('id');
+}
+});
+
+    navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href').substring(1) === current) {
+    link.classList.add('active');
+}
+});
+});
+
+    // Initialize components when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+    setupMobileMenu();
+    setupScrollTop();
+});
+
