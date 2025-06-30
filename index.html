@@ -1,119 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio of Zanethemba Ngwenya, Software Developer specializing in Python, Java, Agile, and Web Development.">
-    <meta name="keywords" content="Software Developer, Python, Java, Agile, Web Development, GitHub, Portfolio">
-    <meta property="og:title" content="Zanethemba Ngwenya - Software Developer Portfolio">
-    <meta property="og:description"
-        content="Explore the portfolio of Zanethemba Ngwenya, a passionate software developer with expertise in Python, Java, and modern software development practices.">
-    <meta property="og:image" content="my_profile_pic.jpeg">
-    <meta property="og:url" content="https://zanethemban.github.io/">
-    <meta name="twitter:card" content="summary_large_image">
     <title>Zanethemba Ngwenya | Software Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 
 </head>
-
 <body>
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-        <div class="profile-container">
-            <img src="my_profile_pic.jpeg" alt="Zanethemba Ngwenya" class="profile-pic">
-        </div>
-        <ul class="sidebar-menu">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </aside>
+<!-- Loading Screen -->
+<div class="loader">
+    <div class="loader-content">
+        <div class="loader-spinner"></div>
+        <h2>Zanethemba Ngwenya</h2>
+        <p>Software Developer Portfolio</p>
+    </div>
+</div>
 
+<!-- Mobile Menu Toggle -->
+<button class="mobile-menu-toggle">
+    <i class="fas fa-bars"></i>
+</button>
 
+<!-- Sidebar Navigation -->
+<aside class="sidebar">
+    <div class="profile-container">
+        <img src="my_profile_pic.jpeg" alt="Zanethemba Ngwenya" class="profile-pic">
+    </div>
+    <ul class="sidebar-menu">
+        <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+        <li><a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+</aside>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Home Section -->
-        <section id="home">
-
-
+<!-- Main Content -->
+<div class="main-content">
+    <!-- Home Section -->
+    <section id="home">
+        <div class="section-content">
             <div class="home-content">
-                <h1>HI THERE!</h1>
-                <h2>I'M <span>ZANETHEMBA NGWENYA</span></h2>
-                <p>A dedicated software developer with a strong foundation in Python and Java. I have experience
-                    building efficient and scalable applications, and I'm passionate about using object-oriented
-                    programming to design clean, maintainable code.</p>
-                    <a href="Zanethemba_Ngwenya_Resume.pdf" class="cta-button" target="_blank" title="Download CV as PDF">
-                        <i class="fas fa-file-pdf"></i> View CV
-                    </a>
-                <a href="#contact" class="secondary-btn">Contact Me</a>
-            </div>
-<br>
-            <div class="skills-orbit">
-                <div class="skills-orbit-center">
-                    <i class="fas fa-code"></i>
+                <div class="home-intro">
+                    <div class="home-text">
+                        <h1>HI THERE!</h1>
+                        <h2>I'M ZANETHEMBA NGWENYA</h2>
+                        <p>A dedicated software developer with a strong foundation in Python and Java. I have experience building efficient and scalable applications, and I'm passionate about using object-oriented programming to design clean, maintainable code.</p>
+
+                        <div class="typing-container">
+                            <div id="sliding-text"></div>
+                        </div>
+
+                        <div id="quote-container">
+                            <p id="quote"></p>
+                        </div>
+
+                        <div class="btn-group">
+                            <a href="Zanethemba_Ngwenya_Resume.pdf" class="cta-button" target="_blank"><i class="fas fa-file-pdf"></i> View CV</a>
+                            <a href="#contact" class="secondary-btn"><i class="fas fa-paper-plane"></i> Contact Me</a>
+                        </div>
+                    </div>
+
+                    <div class="skills-orbit-container">
+                        <div class="skills-orbit">
+                            <div class="skills-orbit-center">
+                                <i class="fas fa-code"></i>
+                            </div>
+
+                            <div class="orbit-circle">
+                                <!-- Programming Language Skills -->
+                                <div class="skill-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <div class="skill-icon">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <div class="skill-icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <div class="skill-icon">
+                                    <i class="fab fa-angular"></i>
+                                </div>
+                                <div class="skill-icon">
+                                    <i class="fab fa-node-js"></i>
+                                </div>
+                                <div class="skill-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <div class="skill-icon">
+                                    <i class="fab fa-java"></i>
+                                </div>
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="orbit-circle">
-                    <!-- Programming Language Skills -->
-                    <div class="skill-icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <div class="skill-icon">
-                        <i class="fab fa-css3-alt"></i>
-                    </div>
-                    <div class="skill-icon">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <div class="skill-icon">
-                        <i class="fab fa-angular"></i>
-                    </div>
-                    <div class="skill-icon">
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <div class="skill-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <div class="skill-icon">
-                        <i class="fab fa-java"></i>
-                    </div>
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-
-                
-                </div>
             </div>
+        </div>
+    </section>
 
-
-        </section>
-
-        <!-- About Section -->
-        <section id="about">
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-content">
             <div class="section-title">
                 <h2>About Me</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
                     <p><strong>Hi, I'm Zanethemba Ngwenya</strong></p>
-                    <p>I'm a passionate Full Stack Developer with 2 years of hands-on experience, specializing in Java
-                        and backend development. I have a solid foundation in Python, JavaScript, HTML, CSS, and
-                        TypeScript, and I’ve worked with frameworks like Spring Boot and Angular.</p>
+                    <p>I'm a passionate Full Stack Developer with 2 years of hands-on experience, specializing in Java and backend development. I have a solid foundation in Python, JavaScript, HTML, CSS, and TypeScript, and I've worked with frameworks like Spring Boot and Angular.</p>
                     <p>I trained at WeThinkCode and am currently upskilling at Shaper as a Full-stack developer intern. I enjoy solving problems, working in agile teams, and creating efficient software systems.</p>
-                    
                 </div>
             </div>
-
-
-
-
 
             <div class="stats-container">
                 <div class="stat-box">
@@ -124,12 +129,21 @@
                     <h4>15+</h4>
                     <p>Projects Completed</p>
                 </div>
-
+<!--                <div class="stat-box">-->
+<!--                    <h4>10+</h4>-->
+<!--                    <p>Technologies</p>-->
+<!--                </div>-->
+<!--                <div class="stat-box">-->
+<!--                    <h4>5+</h4>-->
+<!--                    <p>Certifications</p>-->
+<!--                </div>-->
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Education Section -->
-        <section id="education">
+    <!-- Education Section -->
+    <section id="education">
+        <div class="section-content">
             <div class="section-title">
                 <h2>Experience</h2>
             </div>
@@ -141,9 +155,9 @@
                         <div class="timeline-date">2023 - 2024</div>
                         <h2 class="timeline-title">🎓 WeThinkCode_ | Full Stack Software Engineering</h2>
                         <p class="timeline-paragraph">
-                            Full Stack Software Engineering
-                            Gained hands-on experience in Java, Python, Git, and databases. Worked on real-world projects in a peer-learning environment.</p>
-                        <a href="WeThinkCode_-Curriculum.pdf" class="timeline-btn">View Curriculum Overview</a>
+                            Full Stack Software Engineering. Gained hands-on experience in Java, Python, Git, and databases. Worked on real-world projects in a peer-learning environment.
+                        </p>
+                        <a href="#" class="timeline-btn">View Curriculum Overview</a>
 
                         <!-- Tech Stack Section -->
                         <div class="tech-stack">
@@ -189,7 +203,6 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-
                         <div class="timeline-date">2025 - current</div>
                         <h2 class="timeline-title">Shaper - The digital academy | Full Stack Engineer Trainee</h2>
                         <p class="timeline-paragraph">
@@ -200,8 +213,7 @@
                         <div class="tech-stack">
                             <h3 class="tech-stack-title">Tech Stack</h3>
                             <div class="tech-icons">
-                              
-                                 <div class="tech-icon">
+                                <div class="tech-icon">
                                     <i class="fab fa-java"></i>
                                     <span>Java</span>
                                 </div>
@@ -233,83 +245,70 @@
                                     <i class="fas fa-database"></i>
                                     <span>PostgreSQL</span>
                                 </div>
-                                <div class="tech-icon">
-                                    <i class="fab fa-html5"></i>
-                                    <span>HTML5</span>
-                                </div>
-                                <div class="tech-icon">
-                                    <i class="fab fa-css3-alt"></i>
-                                    <span>CSS3</span>
-                                </div>
-                                <div class="tech-icon">
-                                    <i class="fab fa-docker"></i>
-                                    <span>Docker</span>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <div class="section-content">
+            <div class="section-title">
+                <h2>Achievements</h2>
+            </div>
+            <div class="timeline-content">
+                <h3 class="timeline-title">🏆 Bxrdeless Hackathon Winner (31/08/2024)</h3>
+                <p class="timeline-paragraph">As part of <strong>Geo-Innovators</strong>, I co-developed a web solution tackling African flood risks using open-source geospatial data during the <strong>Bxrdeless Hackathon</strong>. Our project focused on early warning systems and disaster response.</p>
+                <div class="btn-group" style="justify-content: flex-start; margin-top: 20px;">
+                    <a href="https://www.linkedin.com/posts/geekulchagk_bxrderlesshack-activity-7237133617880023042-tPbB" target="_blank" class="secondary-btn">
+                        <i class="fab fa-linkedin"></i> Hackathon Overview
+                    </a>
+                    <a href="https://www.linkedin.com/posts/bxrderless_bxrderlesshack-innovation-bxrderless-activity-7237481940604379136-65gA" target="_blank" class="secondary-btn">
+                        <i class="fab fa-linkedin"></i> Team Participation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        </section>
-
-        <!-- Achievements Section -->
-<section id="achievements">
-    <div class="section-title">
-        <h2>Achievements</h2>
-    </div>
-    <div class="achievement-card">
-        <h3>🏆 Bxrdeless Hackathon Winner (31/08/2024)</h3>
-        <p>As part of <strong>Geo-Innovators</strong>, I co-developed a web solution tackling African flood risks using open-source geospatial data during the <strong>Bxrdeless Hackathon</strong>. Our project focused on early warning systems and disaster response.</p>
-        <ul class="achievement-links">
-            <li>
-                <a href="https://www.linkedin.com/posts/geekulchagk_bxrderlesshack-activity-7237133617880023042-tPbB" target="_blank">
-                    <i class="fab fa-linkedin"></i> Hackathon Overview
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/posts/bxrderless_bxrderlesshack-innovation-bxrderless-activity-7237481940604379136-65gA" target="_blank">
-                    <i class="fab fa-linkedin"></i> Team Participation
-                </a>
-            </li>
-        </ul>
-    </div>
-</section>
-
-
-        <!-- Skills Section -->
-        <section id="skills">
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-content">
             <div class="section-title">
                 <h2>Skills</h2>
             </div>
             <div class="skills-container">
-                <div class="skill-item"><i class="fab fa-python"></i> Python</div>
-                <div class="skill-item"><i class="fab fa-java"></i> Java</div>
-                <div class="skill-item"><i class="fas fa-cogs"></i> Object-Oriented Programming</div>
-                <div class="skill-item"><i class="fab fa-git"></i> Git and GitHub</div>
-                <div class="skill-item"><i class="fas fa-check-circle"></i> Test-Driven Development</div>
-                <div class="skill-item"><i class="fas fa-vial"></i> Unit Testing</div>
-                <div class="skill-item"><i class="fas fa-sync-alt"></i> Agile Methodologies</div>
-                <div class="skill-item"><i class="fab fa-oauth"></i> OAuth Integration</div>
-                <div class="skill-item"><i class="fas fa-cogs"></i> RESTful API Development</div>
-                <div class="skill-item"><i class="fas fa-database"></i> SQL and Databases</div>
-                <div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
-                <div class="skill-item"><i class="fas fa-code-branch"></i> CI/CD</div>
-                <div class="skill-item"><i class="fab fa-github"></i> GitHub Actions</div>
-                <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
-                <div class="skill-item"><i class="fas fa-code"></i> TypeScript</div>
-                <div class="skill-item"><i class="fab fa-html5"></i> HTML & CSS</div>
-                <div class="skill-item"><i class="fas fa-laptop-code"></i> Web Development</div>
-                <div class="skill-item"><i class="fas fa-puzzle-piece"></i> Design Patterns</div>
-                <div class="skill-item"><i class="fas fa-cogs"></i> Asynchronous Programming</div>
-                <div class="skill-item"><i class="fas fa-plug"></i> Networking</div>
-                <div class="skill-item"><i class="fas fa-pencil-alt"></i> Refactoring Code</div>
+                <div class="skill-item"><i class="fab fa-python"></i> <span>Python</span></div>
+                <div class="skill-item"><i class="fab fa-java"></i> <span>Java</span></div>
+                <div class="skill-item"><i class="fas fa-cogs"></i> <span>Object-Oriented Programming</span></div>
+                <div class="skill-item"><i class="fab fa-git"></i> <span>Git and GitHub</span></div>
+                <div class="skill-item"><i class="fas fa-check-circle"></i> <span>Test-Driven Development</span></div>
+                <div class="skill-item"><i class="fas fa-vial"></i> <span>Unit Testing</span></div>
+                <div class="skill-item"><i class="fas fa-sync-alt"></i> <span>Agile Methodologies</span></div>
+                <div class="skill-item"><i class="fab fa-oauth"></i> <span>OAuth Integration</span></div>
+                <div class="skill-item"><i class="fas fa-cogs"></i> <span>RESTful API Development</span></div>
+                <div class="skill-item"><i class="fas fa-database"></i> <span>SQL and Databases</span></div>
+                <div class="skill-item"><i class="fab fa-docker"></i> <span>Docker</span></div>
+                <div class="skill-item"><i class="fas fa-code-branch"></i> <span>CI/CD</span></div>
+                <div class="skill-item"><i class="fab fa-github"></i> <span>GitHub Actions</span></div>
+                <div class="skill-item"><i class="fab fa-js"></i> <span>JavaScript</span></div>
+                <div class="skill-item"><i class="fas fa-code"></i> <span>TypeScript</span></div>
+                <div class="skill-item"><i class="fab fa-html5"></i> <span>HTML & CSS</span></div>
+                <div class="skill-item"><i class="fas fa-laptop-code"></i> <span>Web Development</span></div>
+                <div class="skill-item"><i class="fas fa-puzzle-piece"></i> <span>Design Patterns</span></div>
+                <div class="skill-item"><i class="fas fa-cogs"></i> <span>Asynchronous Programming</span></div>
+                <div class="skill-item"><i class="fas fa-plug"></i> <span>Networking</span></div>
+                <div class="skill-item"><i class="fas fa-pencil-alt"></i> <span>Refactoring Code</span></div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Projects Section -->
-        <section id="projects">
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-content">
             <div class="section-title">
                 <h2>Projects</h2>
             </div>
@@ -320,10 +319,8 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">WattNow (LightInSched)</h3>
-                        <p class="project-desc">A solution for managing and tracking electricity schedules to handle
-                            load shedding effectively.</p>
-                        <a href="https://github.com/Zanethemba-Ngwenya/WattNow" target="_blank" class="project-link">View
-                            Project</a>
+                        <p class="project-desc">A solution for managing and tracking electricity schedules to handle load shedding effectively.</p>
+                        <a href="https://github.com/Zanethemba-Ngwenya/WattNow" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -333,10 +330,8 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">ToyRobot</h3>
-                        <p class="project-desc">An interactive simulation of a toy robot moving on a tabletop,
-                            demonstrating command pattern and OOP principles.</p>
-                        <a href="https://github.com/Zanethemba-Ngwenya/ToyRobot" target="_blank" class="project-link">View
-                            Project</a>
+                        <p class="project-desc">An interactive simulation of a toy robot moving on a tabletop, demonstrating command pattern and OOP principles.</p>
+                        <a href="https://github.com/Zanethemba-Ngwenya/ToyRobot" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -346,14 +341,10 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">RetrieveTasks</h3>
-                        <p class="project-desc">A task management application for efficiently organizing and tracking
-                            tasks.</p>
-                        <a href="https://github.com/Zanethemba-Ngwenya/RetrieveTasks" target="_blank" class="project-link">View
-                            Project</a>
+                        <p class="project-desc">A task management application for efficiently organizing and tracking tasks.</p>
+                        <a href="https://github.com/Zanethemba-Ngwenya/RetrieveTasks" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-
-
 
                 <div class="project-card">
                     <div class="project-img">
@@ -361,10 +352,8 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">HeartDiseasePredict</h3>
-                        <p class="project-desc">A machine learning model that predicts heart disease risk based on
-                            patient data.</p>
-                        <a href="https://github.com/Zanethemba-Ngwenya/HeartDiseasePredict" target="_blank"
-                            class="project-link">View Project</a>
+                        <p class="project-desc">A machine learning model that predicts heart disease risk based on patient data.</p>
+                        <a href="https://github.com/Zanethemba-Ngwenya/HeartDiseasePredict" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -375,8 +364,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Image-compressor</h3>
                         <p class="project-desc">A tool for efficient image compression while maintaining quality.</p>
-                        <a href="https://github.com/Zanethemba-Ngwenya/Image-compr" target="_blank" class="project-link">View
-                            Project</a>
+                        <a href="https://github.com/Zanethemba-Ngwenya/Image-compr" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -386,115 +374,109 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">CodeClinic</h3>
-                        <p class="project-desc">A platform for collaborative code reviews and programming assistance.
-                        </p>
-                        <a href="https://github.com/Zanethemba-Ngwenya/CodeClinic" target="_blank" class="project-link">View
-                            Project</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-key"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">PassWordGenerator</h3>
-                        <p class="project-desc">A secure password generation tool with customizable options.</p>
-                        <a href="https://github.com/Zanethemba-Ngwenya/PassWordGenerator" target="_blank"
-                            class="project-link">View Project</a>
+                        <p class="project-desc">A platform for collaborative code reviews and programming assistance.</p>
+                        <a href="https://github.com/Zanethemba-Ngwenya/CodeClinic" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
 
             <div class="github-link">
                 <a href="https://github.com/Zanethemba-Ngwenya" target="_blank" class="primary-btn">
-                    <i class="fab fa-github" id="fab-fa-github"></i> View More on GitHub
+                    <i class="fab fa-github"></i> View More on GitHub
                 </a>
             </div>
-            
+        </div>
+    </section>
 
-            <br><br>
-
-            <section id="contact">
-                <div class="section-title">
-                    <h2>Contact Me</h2>
-                </div>
-                <div class="contact-container">
-                    <!-- Left Side: Contact Info -->
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Email</h3>
-                                <p><a href="mailto:zngwenya023@student.wethinkcode.co.za">zngwenya023@student.wethinkcode.co.za</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Phone</h3>
-                                <p><a href="tel:+27710631608">+27 71 063 1608</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>LinkedIn</h3>
-                                <p><a href="https://www.linkedin.com/in/zanethemba-ngwenya" target="_blank">Zanethemba Ngwenya</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>GitHub</h3>
-                                <p><a href="https://github.com/Zanethemba-Ngwenya" target="_blank">ZanethembaN</a></p>
-                            </div>
-                        </div>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-content">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
                     </div>
-            
-                    <!-- Right Side: Contact Form -->
-                    <div class="contact-form">
-                        <h3>Send me a message</h3>
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your Name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Your Email">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
-                            </div>
-                            <button type="submit" class="submit-btn">Send Message</button>
-                        </form>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <p><a href="mailto:zngwenya023@student.wethinkcode.co.za">zngwenya023@student.wethinkcode.co.za</a></p>
                     </div>
                 </div>
-            </section>
-            
-
-            <footer>
-                <div class="footer-content">
-                    <div class="social-links">
-                        <a href="https://github.com/Zanethemba-Ngwenya" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/zanethemba-ngwenya" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:zane.ngwenya@example.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
                     </div>
-                    <p class="footer-text">© 2025 Zanethemba Ngwenya. Created with love 💻.</p>
+                    <div class="contact-text">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+27710631608">+27 71 063 1608</a></p>
+                    </div>
                 </div>
-            </footer>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>LinkedIn</h3>
+                        <p><a href="https://www.linkedin.com/in/zanethemba-ngwenya" target="_blank">Zanethemba Ngwenya</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/Zanethemba-Ngwenya" target="_blank">ZanethembaN</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send me a message</h3>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="https://github.com/Zanethemba-Ngwenya" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/zanethemba-ngwenya" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:zngwenya023@student.wethinkcode.co.za" class="social-link">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+27710631608" class="social-link">
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+        <p class="footer-text">© 2025 Zanethemba Ngwenya. Created with passion and creativity.</p>
+    </div>
+</footer>
+
+<!-- Scroll to top button -->
+<div class="scroll-top">
+    <i class="fas fa-arrow-up"></i>
+</div>
 
 </body>
+</html>
