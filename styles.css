@@ -2484,7 +2484,6 @@ footer::before {
         white-space: nowrap;
     }
 
-    /* ========== MOBILE NAVIGATION FIXES ========== */
     @media screen and (max-width: 768px) {
         .mobile-menu-toggle {
             top: 15px;
