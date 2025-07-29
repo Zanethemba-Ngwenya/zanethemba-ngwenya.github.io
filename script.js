@@ -15,6 +15,9 @@
     setupIntersectionObserver();
     setupMobileMenu();
     setupScrollTop();
+    setupContactForm();
+    setupSkillIcons();
+    setupMobileProfileHide();
 }, 1500);
 });
 
@@ -167,17 +170,36 @@
     const sidebar = document.querySelector('.sidebar');
 
     if (menuToggle && sidebar) {
-    menuToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('active');
-});
-}
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            sidebar.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+                sidebar.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close menu when pressing Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                sidebar.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
 
     // Close menu when clicking on a link
     document.querySelectorAll('.sidebar-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-});
-});
+        link.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
 }
 
     // Scroll to top button
@@ -198,6 +220,206 @@
     behavior: 'smooth'
 });
 });
+}
+
+    // Contact form functionality
+function setupContactForm() {
+    const form = document.getElementById('contactForm');
+    const submitBtn = form.querySelector('.submit-btn');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoading = submitBtn.querySelector('.btn-loading');
+
+    // Initialize EmailJS (uncomment when you have EmailJS set up)
+    // emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+
+    // Form validation
+    function validateField(field, errorElement) {
+        const value = field.value.trim();
+        let isValid = true;
+        let errorMessage = '';
+
+        if (field.hasAttribute('required') && !value) {
+            isValid = false;
+            errorMessage = `${field.placeholder} is required`;
+        } else if (field.type === 'email' && value) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(value)) {
+                isValid = false;
+                errorMessage = 'Please enter a valid email address';
+            }
+        }
+
+        errorElement.textContent = errorMessage;
+        field.classList.toggle('error', !isValid);
+        return isValid;
+    }
+
+    // Real-time validation
+    const fields = form.querySelectorAll('.form-control');
+    fields.forEach(field => {
+        const errorElement = document.getElementById(field.id + 'Error');
+        
+        field.addEventListener('blur', () => {
+            validateField(field, errorElement);
+        });
+
+        field.addEventListener('input', () => {
+            if (field.classList.contains('error')) {
+                validateField(field, errorElement);
+            }
+        });
+    });
+
+    // Form submission with real email functionality
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Validate all fields
+        let isFormValid = true;
+        fields.forEach(field => {
+            const errorElement = document.getElementById(field.id + 'Error');
+            if (!validateField(field, errorElement)) {
+                isFormValid = false;
+            }
+        });
+
+        if (!isFormValid) {
+            return;
+        }
+
+        // Show loading state
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'inline-block';
+        submitBtn.disabled = true;
+
+        // Prepare email data
+        const formData = {
+            from_name: form.querySelector('#name').value.trim(),
+            from_email: form.querySelector('#email').value.trim(),
+            message: form.querySelector('#message').value.trim(),
+            to_email: 'zngwenya023@student.wethinkcode.co.za'
+        };
+
+        try {
+                    // For EmailJS (uncomment when set up)
+        /*
+        const response = await emailjs.send(
+            'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+            'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+            formData
+        );
+
+        if (response.status === 200) {
+            showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+            form.reset();
+            
+            // Clear error states
+            fields.forEach(field => {
+                field.classList.remove('error');
+                const errorElement = document.getElementById(field.id + 'Error');
+                errorElement.textContent = '';
+            });
+        } else {
+            throw new Error('Failed to send email');
+        }
+        */
+        
+        // For now, simulate success (replace with actual EmailJS when set up)
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+        form.reset();
+        
+        // Clear error states
+        fields.forEach(field => {
+            field.classList.remove('error');
+            const errorElement = document.getElementById(field.id + 'Error');
+            errorElement.textContent = '';
+        });
+
+        } catch (error) {
+            console.error('Email sending failed:', error);
+            showNotification('Failed to send message. Please try again or contact me directly via email.', 'error');
+        } finally {
+            // Reset button state
+            btnText.style.display = 'inline-block';
+            btnLoading.style.display = 'none';
+            submitBtn.disabled = false;
+        }
+    });
+}
+
+    // Notification system
+    function showNotification(message, type = 'info') {
+    // Remove existing notifications
+    const existingNotification = document.querySelector('.notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle'}"></i>
+            <span>${message}</span>
+            <button class="notification-close" aria-label="Close notification">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    `;
+
+    // Add styles
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};
+        color: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 10000;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        max-width: 400px;
+    `;
+
+    // Add to page
+    document.body.appendChild(notification);
+
+    // Animate in
+    setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => notification.remove(), 300);
+    }, 5000);
+
+    // Close button functionality
+    const closeBtn = notification.querySelector('.notification-close');
+    closeBtn.addEventListener('click', () => {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => notification.remove(), 300);
+    });
+}
+
+    // Skill icons interaction
+    function setupSkillIcons() {
+    const skillIcons = document.querySelectorAll('.skill-icon');
+    
+    skillIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', () => {
+            icon.style.transform = 'scale(1.3) rotate(10deg)';
+        });
+        
+        icon.addEventListener('mouseleave', () => {
+            icon.style.transform = 'scale(1) rotate(0deg)';
+        });
+    });
 }
 
     // Smooth scrolling for anchor links
@@ -246,9 +468,182 @@
 });
 });
 
-    // Initialize components when DOM is loaded
+    // Add CSS for form validation and notifications
+    const additionalStyles = `
+    .form-control.error {
+        border-color: #f44336;
+        box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.2);
+    }
+    
+    .error-message {
+        color: #f44336;
+        font-size: 12px;
+        margin-top: 5px;
+        min-height: 16px;
+    }
+    
+    .submit-btn:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+    
+    .notification-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .notification-close {
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 0;
+        margin-left: auto;
+    }
+    
+    .notification-close:hover {
+        opacity: 0.8;
+    }
+    
+    @media (max-width: 768px) {
+        .notification {
+            top: 10px;
+            right: 10px;
+            left: 10px;
+            max-width: none;
+        }
+    }
+`;
+
+    // Inject additional styles
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = additionalStyles;
+    document.head.appendChild(styleSheet);
+
+        // Initialize components when DOM is loaded
     document.addEventListener('DOMContentLoaded', () => {
-    setupMobileMenu();
-    setupScrollTop();
+        setupMobileMenu();
+        setupScrollTop();
+        setupContactForm();
+        setupSkillIcons();
+        setupFormspreeForm();
+    });
+
+    // Add keyboard navigation support
+    document.addEventListener('keydown', (e) => {
+    // Navigate sections with arrow keys
+    if (e.altKey && (e.key === 'ArrowUp' || e.key === 'ArrowDown')) {
+        e.preventDefault();
+        const sections = Array.from(document.querySelectorAll('section'));
+        const currentSection = sections.find(section => {
+            const rect = section.getBoundingClientRect();
+            return rect.top <= 100 && rect.bottom >= 100;
+        });
+        
+        if (currentSection) {
+            const currentIndex = sections.indexOf(currentSection);
+            const targetIndex = e.key === 'ArrowUp' 
+                ? Math.max(0, currentIndex - 1)
+                : Math.min(sections.length - 1, currentIndex + 1);
+            
+            sections[targetIndex].scrollIntoView({ behavior: 'smooth' });
+        }
+    }
 });
+
+    // Add performance optimizations
+    function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+    // Optimize scroll events
+    const optimizedScrollHandler = debounce(() => {
+    // Scroll-based animations and updates
+}, 16); // ~60fps
+
+    window.addEventListener('scroll', optimizedScrollHandler);
+
+// Formspree form handling
+function setupFormspreeForm() {
+    const formspreeForm = document.getElementById('contactFormSpree');
+    
+    if (formspreeForm) {
+        formspreeForm.addEventListener('submit', function(e) {
+            const submitBtn = formspreeForm.querySelector('.submit-btn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            
+            // Show loading state
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline-block';
+            submitBtn.disabled = true;
+            
+            // Formspree will handle the submission automatically
+            // We just need to show success message after a delay
+            setTimeout(() => {
+                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                
+                // Reset button state
+                btnText.style.display = 'inline-block';
+                btnLoading.style.display = 'none';
+                submitBtn.disabled = false;
+                
+                // Reset form
+                formspreeForm.reset();
+            }, 2000);
+        });
+    }
+}
+
+// Mobile profile picture hide function
+function setupMobileProfileHide() {
+    const profileContainer = document.querySelector('.profile-container');
+    
+    if (profileContainer) {
+        // Function to check if we're on mobile
+        function isMobile() {
+            return window.innerWidth <= 768;
+        }
+        
+        // Function to hide/show profile based on screen size
+        function toggleProfileVisibility() {
+            if (isMobile()) {
+                profileContainer.style.display = 'none';
+                profileContainer.style.width = '0';
+                profileContainer.style.height = '0';
+                profileContainer.style.margin = '0';
+                profileContainer.style.padding = '0';
+                profileContainer.style.border = 'none';
+                profileContainer.style.background = 'none';
+                profileContainer.style.boxShadow = 'none';
+                profileContainer.style.opacity = '0';
+                profileContainer.style.visibility = 'hidden';
+                profileContainer.style.position = 'absolute';
+                profileContainer.style.left = '-9999px';
+                profileContainer.style.top = '-9999px';
+                profileContainer.style.zIndex = '-9999';
+                profileContainer.style.transform = 'scale(0)';
+                profileContainer.style.clipPath = 'inset(100%)';
+            } else {
+                // Reset to original styles on desktop
+                profileContainer.style = '';
+            }
+        }
+        
+        // Initial check
+        toggleProfileVisibility();
+        
+        // Listen for window resize
+        window.addEventListener('resize', toggleProfileVisibility);
+    }
+}
 

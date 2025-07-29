@@ -3,15 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zanethemba Ngwenya - Full Stack Software Developer specializing in Java, Python, and modern web technologies. View my projects, skills, and experience.">
+    <meta name="keywords" content="software developer, full stack developer, Java developer, Python developer, web development, South Africa">
+    <meta name="author" content="Zanethemba Ngwenya">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zanethemba-ngwenya.github.io/">
+    <meta property="og:title" content="Zanethemba Ngwenya - Software Developer">
+    <meta property="og:description" content="Full Stack Software Developer specializing in Java, Python, and modern web technologies.">
+    <meta property="og:image" content="https://zanethemba-ngwenya.github.io/my_profile_pic.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zanethemba-ngwenya.github.io/">
+    <meta property="twitter:title" content="Zanethemba Ngwenya - Software Developer">
+    <meta property="twitter:description" content="Full Stack Software Developer specializing in Java, Python, and modern web technologies.">
+    <meta property="twitter:image" content="https://zanethemba-ngwenya.github.io/my_profile_pic.jpeg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    
     <title>Zanethemba Ngwenya | Software Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js" defer></script>
-
 </head>
 <body>
 <!-- Loading Screen -->
-<div class="loader">
+<div class="loader" role="status" aria-label="Loading portfolio">
     <div class="loader-content">
         <div class="loader-spinner"></div>
         <h2>Zanethemba Ngwenya</h2>
@@ -19,83 +40,88 @@
     </div>
 </div>
 
+<!-- Particles Background -->
+<div class="particles" id="particles" aria-hidden="true"></div>
+
 <!-- Mobile Menu Toggle -->
-<!-- <button class="mobile-menu-toggle">
+<button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
     <i class="fas fa-bars"></i>
-</button> -->
+</button>
 
 <!-- Sidebar Navigation -->
-<aside class="sidebar">
-    <div class="profile-container">
+<aside class="sidebar" role="navigation" aria-label="Main navigation">
+    <div class="profile-container desktop-only">
         <img src="my_profile_pic.jpeg" alt="Zanethemba Ngwenya" class="profile-pic">
     </div>
-    <ul class="sidebar-menu">
-        <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-        <li><a href="#education"><i class="fas fa-graduation-cap"></i> Experience</a></li>
-        <li><a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a></li>
-        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
-        <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
+    <nav class="sidebar-menu">
+        <ul>
+            <li><a href="#home" class="active" aria-label="Go to home section"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about" aria-label="Go to about section"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#education" aria-label="Go to experience section"><i class="fas fa-graduation-cap"></i> Experience</a></li>
+            <li><a href="#achievements" aria-label="Go to achievements section"><i class="fas fa-trophy"></i> Achievements</a></li>
+            <li><a href="#skills" aria-label="Go to skills section"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="#projects" aria-label="Go to projects section"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="#contact" aria-label="Go to contact section"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
 </aside>
 
 <!-- Main Content -->
-<div class="main-content">
+<main class="main-content" role="main">
     <!-- Home Section -->
-    <section id="home">
+    <section id="home" aria-labelledby="home-title">
         <div class="section-content">
             <div class="home-content">
                 <div class="home-intro">
                     <div class="home-text">
-                        <h1>HI THERE!</h1>
+                        <h1 id="home-title">HI THERE!</h1>
                         <h2>I'M ZANETHEMBA NGWENYA</h2>
                         <p>A dedicated software developer with a strong foundation in Python and Java. I have experience building efficient and scalable applications, and I'm passionate about using object-oriented programming to design clean, maintainable code.</p>
 
-                        <div class="typing-container">
-                            <div id="sliding-text"></div>
+                        <div class="typing-container" aria-live="polite">
+                            <div id="sliding-text" aria-label="Dynamic text showing current role"></div>
                         </div>
 
-                        <div id="quote-container">
+                        <div id="quote-container" aria-live="polite">
                             <p id="quote"></p>
                         </div>
 
                         <div class="btn-group">
-                            <a href="Zanethemba_Ngwenya_Resume.pdf" class="cta-button" target="_blank"><i class="fas fa-file-pdf"></i> View CV</a>
-                            <a href="#contact" class="secondary-btn"><i class="fas fa-paper-plane"></i> Contact Me</a>
+                            <a href="Zanethemba_Ngwenya_Resume.pdf" class="cta-button" target="_blank" rel="noopener noreferrer" aria-label="Download CV"><i class="fas fa-file-pdf"></i> View CV</a>
+                            <a href="#contact" class="secondary-btn" aria-label="Go to contact section"><i class="fas fa-paper-plane"></i> Contact Me</a>
                         </div>
                     </div>
 
-                    <div class="skills-orbit-container">
+                    <div class="skills-orbit-container" aria-label="Skills visualization">
                         <div class="skills-orbit">
                             <div class="skills-orbit-center">
-                                <i class="fas fa-code"></i>
+                                <i class="fas fa-code" aria-hidden="true"></i>
                             </div>
 
                             <div class="orbit-circle">
                                 <!-- Programming Language Skills -->
-                                <div class="skill-icon">
+                                <div class="skill-icon" aria-label="HTML5">
                                     <i class="fab fa-html5"></i>
                                 </div>
-                                <div class="skill-icon">
+                                <div class="skill-icon" aria-label="CSS3">
                                     <i class="fab fa-css3-alt"></i>
                                 </div>
-                                <div class="skill-icon">
+                                <div class="skill-icon" aria-label="JavaScript">
                                     <i class="fab fa-js"></i>
                                 </div>
-                                <div class="skill-icon">
+                                <div class="skill-icon" aria-label="Angular">
                                     <i class="fab fa-angular"></i>
                                 </div>
-                                <div class="skill-icon">
+                                <div class="skill-icon" aria-label="Node.js">
                                     <i class="fab fa-node-js"></i>
                                 </div>
-                                <div class="skill-icon">
+                                <div class="skill-icon" aria-label="Python">
                                     <i class="fab fa-python"></i>
                                 </div>
-                                <div class="skill-icon">
+                                <div class="skill-icon" aria-label="Java">
                                     <i class="fab fa-java"></i>
                                 </div>
-                                <div class="skill-icon">
+                                <div class="skill-icon" aria-label="Database">
                                     <i class="fas fa-database"></i>
                                 </div>
                             </div>
@@ -107,10 +133,10 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" aria-labelledby="about-title">
         <div class="section-content">
             <div class="section-title">
-                <h2>About Me</h2>
+                <h2 id="about-title">About Me</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
@@ -129,23 +155,15 @@
                     <h4>15+</h4>
                     <p>Projects Completed</p>
                 </div>
-<!--                <div class="stat-box">-->
-<!--                    <h4>10+</h4>-->
-<!--                    <p>Technologies</p>-->
-<!--                </div>-->
-<!--                <div class="stat-box">-->
-<!--                    <h4>5+</h4>-->
-<!--                    <p>Certifications</p>-->
-<!--                </div>-->
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education">
+    <section id="education" aria-labelledby="education-title">
         <div class="section-content">
             <div class="section-title">
-                <h2>Experience</h2>
+                <h2 id="education-title">Experience</h2>
             </div>
 
             <div class="timeline">
@@ -157,7 +175,7 @@
                         <p class="timeline-paragraph">
                             Full Stack Software Engineering. Gained hands-on experience in Java, Python, Git, and databases. Worked on real-world projects in a peer-learning environment.
                         </p>
-                        <a href="WeThinkCode_-Curriculum.pdf" class="timeline-btn" target="_blank" rel="noopener noreferrer">View Curriculum Overview</a>
+                        <a href="WeThinkCode_-Curriculum.pdf" class="timeline-btn" target="_blank" rel="noopener noreferrer" aria-label="View WeThinkCode curriculum">View Curriculum Overview</a>
 
                         <!-- Tech Stack Section -->
                         <div class="tech-stack">
@@ -254,19 +272,19 @@
     </section>
 
     <!-- Achievements Section -->
-    <section id="achievements">
+    <section id="achievements" aria-labelledby="achievements-title">
         <div class="section-content">
             <div class="section-title">
-                <h2>Achievements</h2>
+                <h2 id="achievements-title">Achievements</h2>
             </div>
             <div class="timeline-content">
                 <h3 class="timeline-title">🏆 Bxrdeless Hackathon Winner (31/08/2024)</h3>
                 <p class="timeline-paragraph">As part of <strong>Geo-Innovators</strong>, I co-developed a web solution tackling African flood risks using open-source geospatial data during the <strong>Bxrdeless Hackathon</strong>. Our project focused on early warning systems and disaster response.</p>
                 <div class="btn-group" style="justify-content: flex-start; margin-top: 20px;">
-                    <a href="https://www.linkedin.com/posts/geekulchagk_bxrderlesshack-activity-7237133617880023042-tPbB" target="_blank" class="secondary-btn">
+                    <a href="https://www.linkedin.com/posts/geekulchagk_bxrderlesshack-activity-7237133617880023042-tPbB" target="_blank" rel="noopener noreferrer" class="secondary-btn" aria-label="View hackathon overview on LinkedIn">
                         <i class="fab fa-linkedin"></i> Hackathon Overview
                     </a>
-                    <a href="https://www.linkedin.com/posts/bxrderless_bxrderlesshack-innovation-bxrderless-activity-7237481940604379136-65gA" target="_blank" class="secondary-btn">
+                    <a href="https://www.linkedin.com/posts/bxrderless_bxrderlesshack-innovation-bxrderless-activity-7237481940604379136-65gA" target="_blank" rel="noopener noreferrer" class="secondary-btn" aria-label="View team participation on LinkedIn">
                         <i class="fab fa-linkedin"></i> Team Participation
                     </a>
                 </div>
@@ -275,10 +293,10 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" aria-labelledby="skills-title">
         <div class="section-content">
             <div class="section-title">
-                <h2>Skills</h2>
+                <h2 id="skills-title">Skills</h2>
             </div>
             <div class="skills-container">
                 <div class="skill-item"><i class="fab fa-python"></i> <span>Python</span></div>
@@ -307,10 +325,10 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" aria-labelledby="projects-title">
         <div class="section-content">
             <div class="section-title">
-                <h2>Projects</h2>
+                <h2 id="projects-title">Projects</h2>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
@@ -320,7 +338,7 @@
                     <div class="project-content">
                         <h3 class="project-title">WattNow (LightInSched)</h3>
                         <p class="project-desc">A solution for managing and tracking electricity schedules to handle load shedding effectively.</p>
-                        <a href="https://github.com/Zanethemba-Ngwenya/WattNow" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/Zanethemba-Ngwenya/WattNow" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View WattNow project on GitHub">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -331,7 +349,7 @@
                     <div class="project-content">
                         <h3 class="project-title">ToyRobot</h3>
                         <p class="project-desc">An interactive simulation of a toy robot moving on a tabletop, demonstrating command pattern and OOP principles.</p>
-                        <a href="https://github.com/Zanethemba-Ngwenya/ToyRobot" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/Zanethemba-Ngwenya/ToyRobot" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View ToyRobot project on GitHub">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -342,7 +360,7 @@
                     <div class="project-content">
                         <h3 class="project-title">RetrieveTasks</h3>
                         <p class="project-desc">A task management application for efficiently organizing and tracking tasks.</p>
-                        <a href="https://github.com/Zanethemba-Ngwenya/RetrieveTasks" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/Zanethemba-Ngwenya/RetrieveTasks" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View RetrieveTasks project on GitHub">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -353,7 +371,7 @@
                     <div class="project-content">
                         <h3 class="project-title">HeartDiseasePredict</h3>
                         <p class="project-desc">A machine learning model that predicts heart disease risk based on patient data.</p>
-                        <a href="https://github.com/Zanethemba-Ngwenya/HeartDiseasePredict" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/Zanethemba-Ngwenya/HeartDiseasePredict" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View HeartDiseasePredict project on GitHub">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -364,7 +382,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Image-compressor</h3>
                         <p class="project-desc">A tool for efficient image compression while maintaining quality.</p>
-                        <a href="https://github.com/Zanethemba-Ngwenya/Image-compr" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/Zanethemba-Ngwenya/Image-compr" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Image-compressor project on GitHub">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -375,13 +393,13 @@
                     <div class="project-content">
                         <h3 class="project-title">CodeClinic</h3>
                         <p class="project-desc">A platform for collaborative code reviews and programming assistance.</p>
-                        <a href="https://github.com/Zanethemba-Ngwenya/CodeClinic" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/Zanethemba-Ngwenya/CodeClinic" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View CodeClinic project on GitHub">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
 
             <div class="github-link">
-                <a href="https://github.com/Zanethemba-Ngwenya" target="_blank" class="primary-btn">
+                <a href="https://github.com/Zanethemba-Ngwenya" target="_blank" rel="noopener noreferrer" class="primary-btn" aria-label="View more projects on GitHub">
                     <i class="fab fa-github"></i> View More on GitHub
                 </a>
             </div>
@@ -389,10 +407,10 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" aria-labelledby="contact-title">
         <div class="section-content">
             <div class="section-title">
-                <h2>Contact Me</h2>
+                <h2 id="contact-title">Contact Me</h2>
             </div>
             <div class="contact-container">
                 <div class="contact-item">
@@ -419,7 +437,7 @@
                     </div>
                     <div class="contact-text">
                         <h3>LinkedIn</h3>
-                        <p><a href="https://www.linkedin.com/in/zanethemba-ngwenya" target="_blank">Zanethemba Ngwenya</a></p>
+                        <p><a href="https://www.linkedin.com/in/zanethemba-ngwenya" target="_blank" rel="noopener noreferrer">Zanethemba Ngwenya</a></p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -428,44 +446,76 @@
                     </div>
                     <div class="contact-text">
                         <h3>GitHub</h3>
-                        <p><a href="https://github.com/Zanethemba-Ngwenya" target="_blank">ZanethembaN</a></p>
+                        <p><a href="https://github.com/Zanethemba-Ngwenya" target="_blank" rel="noopener noreferrer">ZanethembaN</a></p>
                     </div>
                 </div>
             </div>
 
             <div class="contact-form">
                 <h3>Send me a message</h3>
-                <form>
+                <!-- Option 1: EmailJS (requires setup) -->
+                <form id="contactForm" novalidate style="display: none;">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required aria-label="Your name">
+                        <div class="error-message" id="nameError"></div>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Your Email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required aria-label="Your email">
+                        <div class="error-message" id="emailError"></div>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required aria-label="Your message"></textarea>
+                        <div class="error-message" id="messageError"></div>
                     </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" class="submit-btn" aria-label="Send message">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Sending...
+                        </span>
+                    </button>
                 </form>
+                
+                <!-- Option 2: Formspree (works immediately) -->
+                <form action="https://formspree.io/f/xzzvgwpl" method="POST" id="contactFormSpree">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" placeholder="Your Name" required aria-label="Your name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Your Email" required aria-label="Your email">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required aria-label="Your message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" aria-label="Send message">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Sending...
+                        </span>
+                    </button>
+                </form>
+                
+                <div class="form-note">
+                    <p><i class="fas fa-info-circle"></i> Or contact me directly at <a href="mailto:zngwenya023@student.wethinkcode.co.za">zngwenya023@student.wethinkcode.co.za</a></p>
+                </div>
             </div>
         </div>
     </section>
-</div>
+</main>
 
 <!-- Footer -->
-<footer>
+<footer role="contentinfo">
     <div class="footer-content">
         <div class="social-links">
-            <a href="https://github.com/Zanethemba-Ngwenya" target="_blank" class="social-link">
+            <a href="https://github.com/Zanethemba-Ngwenya" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit GitHub profile">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/zanethemba-ngwenya" target="_blank" class="social-link">
+            <a href="https://www.linkedin.com/in/zanethemba-ngwenya" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit LinkedIn profile">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="mailto:zngwenya023@student.wethinkcode.co.za" class="social-link">
+            <a href="mailto:zngwenya023@student.wethinkcode.co.za" class="social-link" aria-label="Send email">
                 <i class="fas fa-envelope"></i>
             </a>
-            <a href="tel:+27710631608" class="social-link">
+            <a href="tel:+27710631608" class="social-link" aria-label="Call phone number">
                 <i class="fas fa-phone"></i>
             </a>
         </div>
@@ -474,9 +524,9 @@
 </footer>
 
 <!-- Scroll to top button -->
-<div class="scroll-top">
+<button class="scroll-top" aria-label="Scroll to top">
     <i class="fas fa-arrow-up"></i>
-</div>
+</button>
 
 </body>
 </html>
