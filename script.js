@@ -18,6 +18,7 @@
     setupContactForm();
     setupSkillIcons();
     setupMobileProfileHide();
+    setupProjectsOverlay();
 }, 1500);
 });
 
@@ -644,6 +645,67 @@ function setupMobileProfileHide() {
         
         // Listen for window resize
         window.addEventListener('resize', toggleProfileVisibility);
+    }
+}
+
+// Projects Overlay functionality
+function setupProjectsOverlay() {
+    const viewAllProjectsBtn = document.querySelector('.view-all-projects-btn');
+    const projectsOverlay = document.getElementById('projectsOverlay');
+    const closeOverlayBtn = document.querySelector('.close-overlay-btn');
+    
+    if (viewAllProjectsBtn && projectsOverlay) {
+        // Open overlay
+        viewAllProjectsBtn.addEventListener('click', function() {
+            projectsOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            
+            // Add entrance animation
+            setTimeout(() => {
+                const projectCards = projectsOverlay.querySelectorAll('.project-card');
+                projectCards.forEach((card, index) => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(30px)';
+                    setTimeout(() => {
+                        card.style.transition = 'all 0.6s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 100);
+                });
+            }, 300);
+        });
+        
+        // Close overlay
+        if (closeOverlayBtn) {
+            closeOverlayBtn.addEventListener('click', closeOverlay);
+        }
+        
+        // Close on overlay background click
+        projectsOverlay.addEventListener('click', function(e) {
+            if (e.target === projectsOverlay) {
+                closeOverlay();
+            }
+        });
+        
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && projectsOverlay.classList.contains('active')) {
+                closeOverlay();
+            }
+        });
+        
+        function closeOverlay() {
+            projectsOverlay.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+            
+            // Reset animations
+            const projectCards = projectsOverlay.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                card.style.transition = '';
+                card.style.opacity = '';
+                card.style.transform = '';
+            });
+        }
     }
 }
 
