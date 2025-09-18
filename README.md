@@ -17,26 +17,6 @@
 
 Results-driven Software Developer with a strong foundation in Java, Python, and modern web technologies. I build clean, reliable software with a focus on backend APIs, data, and user-centered web apps.
 
----
-
-## Table of Contents
-- [Quick links](#quick-links)
-- [About me](#about-me)
-- [Highlights](#highlights)
-- [Selected projects](#selected-projects)
-- [Experience](#experience)
-- [Achievements](#achievements)
-- [Skills snapshot](#skills-snapshot)
-- [Project details (for reviewers)](#project-details-for-reviewers)
-- [Run locally](#run-locally)
-- [Deployment](#deployment)
-- [Accessibility & performance](#accessibility--performance)
-- [Customization pointers](#customization-pointers)
-- [Roadmap (next improvements)](#roadmap-next-improvements)
-- [Contact](#contact)
-
----
-
 ## Quick links
 - Live portfolio: [zanethemba-ngwenya.github.io](https://zanethemba-ngwenya.github.io)
 - Resume (PDF): [Zanethemba_Ngwenya_Resume.pdf](./Zanethemba_Ngwenya_Resume.pdf)
@@ -51,16 +31,6 @@ I have 2+ years of hands-on experience across Java, Python, JavaScript/TypeScrip
 - 2+ years: building projects, shipping features, and improving code quality
 - 15+ projects: spanning backend services, web apps, and tooling
 - Hackathon winner: Bxrdeless Hackathon (Aug 2024)
-
-## Selected projects
-- WattNow (LightInSched): Manage and track load-shedding schedules. [View](https://github.com/Zanethemba-Ngwenya/WattNow)
-- ToyRobot: Command-pattern OOP simulation of a toy robot on a tabletop. [View](https://github.com/Zanethemba-Ngwenya/ToyRobot)
-- RetrieveTasks: Lightweight task management to organize and track work. [View](https://github.com/Zanethemba-Ngwenya/RetrieveTasks)
-- HeartDiseasePredict: ML model to predict heart disease risk from patient data. [View](https://github.com/Zanethemba-Ngwenya/HeartDiseasePredict)
-- Image-compressor: Tooling for efficient image compression with quality preservation. [View](https://github.com/Zanethemba-Ngwenya/Image-compr)
-- CodeClinic: Collaborative code review and programming assistance platform. [View](https://github.com/Zanethemba-Ngwenya/CodeClinic)
-
-More on my GitHub: [github.com/Zanethemba-Ngwenya](https://github.com/Zanethemba-Ngwenya)
 
 ## Experience
 - Shaper — Full Stack Engineer Trainee (2025–present)
@@ -90,8 +60,6 @@ More on my GitHub: [github.com/Zanethemba-Ngwenya](https://github.com/Zanethemba
 - Languages: Java, Python, JavaScript/TypeScript, SQL, HTML/CSS
 - Frameworks: Spring Boot, Angular, Node.js/Express
 - Practices: OOP, REST APIs, TDD/Unit testing, CI/CD, Git/GitHub
-
----
 
 ## Project details (for reviewers)
 
@@ -133,17 +101,6 @@ More on my GitHub: [github.com/Zanethemba-Ngwenya](https://github.com/Zanethemba
 - ARIA labels + keyboard navigation patterns
 - Lazy loading for images, lightweight JavaScript, CSS transform-based animations
 - Honeypot input in contact form to mitigate spam
-
-## Customization pointers
-- Colors/branding: search for `#ff8c00` and `#ff5500` in `styles.css`
-- Content: update sections in `index.html`
-- Interactions: refine behavior in `script.js`
-
-## Roadmap (next improvements)
-- Dark mode toggle with CSS variables
-- Project filters/tags and case‑study pages (impact, architecture, metrics)
-- PWA basics (manifest + service worker)
-- Lightweight analytics (e.g., Plausible)
 
 ## Contact
 If this role values initiative and delivery, I’m ready to contribute from day one.
