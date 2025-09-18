@@ -2160,12 +2160,11 @@ footer::before {
     }
 
     .sidebar-menu li {
-        height: 7px 8px;
+        height: 8px;
     }
 
     .sidebar-menu a {
         font-size: 7px;
-        font-size: 5px 10px;
         min-height: 24px;
     }
 
@@ -2299,8 +2298,7 @@ footer::before {
 @media screen and (max-width: 576px) {
     .mobile-menu-toggle {
         font-size: 17px;
-        font-size: 17px;
-        top: 1ppx;
+        top: 1px;
         left: 10px;
     }
 
