@@ -1,207 +1,63 @@
-# Zanethemba Ngwenya's Portfolio
+# Zanethemba Ngwenya — Software Developer
 
-Welcome to the portfolio website of Zanethemba Ngwenya, a passionate Software Engineer and Full Stack Developer. This site showcases my projects, skills, and experiences in the tech world.
+Results-driven Software Developer with a strong foundation in Java, Python, and modern web technologies. I build clean, reliable software with a focus on backend APIs, data, and user-centered web apps.
 
-## 🚀 Live Demo
+## Quick links
+- **Live portfolio**: [zanethemba-ngwenya.github.io](https://zanethemba-ngwenya.github.io)
+- **Resume (PDF)**: [Zanethemba_Ngwenya_Resume.pdf](./Zanethemba_Ngwenya_Resume.pdf)
+- **LinkedIn**: [linkedin.com/in/zanethemba-ngwenya](https://www.linkedin.com/in/zanethemba-ngwenya)
+- **GitHub**: [github.com/Zanethemba-Ngwenya](https://github.com/Zanethemba-Ngwenya)
+- **Email**: [zngwenya023@student.wethinkcode.co.za](mailto:zngwenya023@student.wethinkcode.co.za)
 
-Visit the live portfolio: [https://zanethemba-ngwenya.github.io](https://zanethemba-ngwenya.github.io)
+## About me
+I have 2+ years of hands-on experience across Java, Python, JavaScript/TypeScript, and SQL. Trained at WeThinkCode_ and currently upskilling at Shaper (Full Stack Engineer Trainee). I enjoy solving real problems, writing maintainable code, and collaborating in agile teams.
 
-## ✨ Features
+## Highlights
+- **2+ years**: building projects, shipping features, and improving code quality
+- **15+ projects**: spanning backend services, web apps, and tooling
+- **Hackathon winner**: Bxrdeless Hackathon (Aug 2024)
 
-### **Design & User Experience**
-- **Modern & Responsive Design**: Fully responsive layout that works perfectly on desktop, tablet, and mobile devices
-- **Smooth Animations**: Elegant loading screen, typing effects, and smooth transitions throughout
-- **Interactive Elements**: Hover effects, skill orbit visualization, and dynamic content
-- **Accessibility**: WCAG compliant with proper ARIA labels and keyboard navigation
-- **Performance Optimized**: Fast loading times with optimized assets and code
+## Selected projects
+- **WattNow (LightInSched)**: Manage and track load-shedding schedules. [View](https://github.com/Zanethemba-Ngwenya/WattNow)
+- **ToyRobot**: Command-pattern OOP simulation of a toy robot on a tabletop. [View](https://github.com/Zanethemba-Ngwenya/ToyRobot)
+- **RetrieveTasks**: Lightweight task management to organize and track work. [View](https://github.com/Zanethemba-Ngwenya/RetrieveTasks)
+- **HeartDiseasePredict**: ML model to predict heart disease risk from patient data. [View](https://github.com/Zanethemba-Ngwenya/HeartDiseasePredict)
+- **Image-compressor**: Tooling for efficient image compression with quality preservation. [View](https://github.com/Zanethemba-Ngwenya/Image-compr)
+- **CodeClinic**: Collaborative code review and programming assistance platform. [View](https://github.com/Zanethemba-Ngwenya/CodeClinic)
 
-### **Technical Features**
-- **SEO Optimized**: Meta tags, Open Graph, and Twitter Card support
-- **Contact Form**: Fully functional contact form with validation and notifications
-- **Mobile Navigation**: Improved mobile menu with touch-friendly interactions
-- **Keyboard Navigation**: Full keyboard support with Alt+Arrow keys for section navigation
-- **Progressive Enhancement**: Works without JavaScript, enhanced with it
+More on my GitHub: [github.com/Zanethemba-Ngwenya](https://github.com/Zanethemba-Ngwenya)
 
-### **Content Sections**
-- **Home**: Dynamic typing effect, skill visualization, and call-to-action buttons
-- **About**: Professional summary with animated statistics
-- **Experience**: Timeline-based experience showcase with tech stacks
-- **Achievements**: Highlighting hackathon wins and notable accomplishments
-- **Skills**: Comprehensive skill display with interactive icons
-- **Projects**: Project showcase with GitHub links and descriptions
-- **Contact**: Multiple contact methods and functional contact form
+## Experience
+- **Shaper — Full Stack Engineer Trainee (2025–present)**
+  - Building responsive web apps, modern frontend/backend, cloud fundamentals, agile delivery
+- **WeThinkCode_ — Full Stack Software Engineering (2023–2024)**
+  - Intensive training with Java, Python, Git, databases, and real-world projects in peer-learning
+  - Curriculum overview: [WeThinkCode_-Curriculum.pdf](./WeThinkCode_-Curriculum.pdf)
 
-## 🛠️ Technologies Used
+## Achievements
+- **Winner — Bxrdeless Hackathon (31/08/2024)**
+  - Built a flood-risk early warning solution with open-source geospatial data
+  - Overviews: [Post 1](https://www.linkedin.com/posts/geekulchagk_bxrderlesshack-activity-7237133617880023042-tPbB) · [Post 2](https://www.linkedin.com/posts/bxrderless_bxrderlesshack-innovation-bxrderless-activity-7237481940604379136-65gA)
 
-- **HTML5**: Semantic markup with accessibility features
-- **CSS3**: Modern styling with Flexbox, Grid, and advanced animations
-- **JavaScript (ES6+)**: Interactive features and form handling
-- **Font Awesome**: Icons for enhanced visual appeal
-- **Responsive Design**: Mobile-first approach with media queries
+## Skills snapshot
+- **Languages**: Java, Python, JavaScript/TypeScript, SQL, HTML/CSS
+- **Frameworks**: Spring Boot, Angular, Node.js/Express
+- **Practices**: OOP, REST APIs, TDD/Unit testing, CI/CD, Git/GitHub
+- **Tools**: Docker, GitHub Actions, PostgreSQL
 
-## 📱 Responsive Design
+## Site overview (for recruiters)
+- **Home**: brief intro, CV link, and contact
+- **About**: background and interests
+- **Experience**: timeline of training and current role with tech stacks
+- **Achievements**: hackathon win and highlights
+- **Skills**: at-a-glance competencies
+- **Projects**: quick overview with links to code
+- **Contact**: email, phone, LinkedIn, GitHub, plus a web form
 
-The portfolio is fully responsive and optimized for:
-- **Desktop**: 1200px+ (Full experience with sidebar navigation)
-- **Tablet**: 768px - 1199px (Adapted layout with collapsible sidebar)
-- **Mobile**: 320px - 767px (Mobile-optimized with hamburger menu)
+## Technical notes
+- **SEO**: meta tags, Open Graph/Twitter cards, canonical, and structured data (JSON‑LD)
+- **Accessibility**: semantic HTML, ARIA labels, keyboard navigation
+- **Performance**: lazy-loading, optimized animations, lightweight stack
+- **Contact**: email form via Formspree (with basic anti-spam)
 
-## 🚀 Getting Started
-
-### Prerequisites
-- A modern web browser
-- Basic understanding of HTML, CSS, and JavaScript (for customization)
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Zanethemba-Ngwenya/zanethemba-ngwenya.github.io.git
-   cd zanethemba-ngwenya.github.io
-   ```
-
-2. **Open the project**
-   - Simply open `index.html` in your web browser
-   - Or use a local server for development:
-     ```bash
-     # Using Python
-     python -m http.server 8000
-     
-     # Using Node.js
-     npx serve .
-     
-     # Using PHP
-     php -S localhost:8000
-     ```
-
-3. **Customize for your needs**
-   - Update personal information in `index.html`
-   - Modify colors and styling in `styles.css`
-   - Add custom functionality in `script.js`
-   - Replace profile picture and documents
-
-## 🎨 Customization
-
-### Personal Information
-Update the following in `index.html`:
-- Name and title
-- About section content
-- Experience and education details
-- Skills and technologies
-- Project links and descriptions
-- Contact information
-
-### Styling
-Modify `styles.css` to:
-- Change color scheme (search for `#ff8c00` and `#ff5500`)
-- Adjust animations and transitions
-- Modify layout and spacing
-- Update typography
-
-### Functionality
-Enhance `script.js` to:
-- Add new interactive features
-- Modify form handling
-- Customize animations
-- Add analytics tracking
-
-## 📋 Features Breakdown
-
-### **Loading Screen**
-- Animated spinner with gradient background
-- Smooth fade-out transition
-- Professional branding display
-
-### **Navigation**
-- Fixed sidebar with smooth hover effects
-- Mobile-responsive hamburger menu
-- Active section highlighting
-- Keyboard navigation support
-
-### **Home Section**
-- Dynamic typing animation
-- Rotating skills orbit
-- Random inspirational quotes
-- Call-to-action buttons
-
-### **Contact Form**
-- Real-time validation
-- Success/error notifications
-- Loading states
-- Accessibility features
-
-### **Animations**
-- Intersection Observer for scroll-triggered animations
-- Smooth transitions between sections
-- Hover effects on interactive elements
-- Performance-optimized animations
-
-## 🔧 Performance Optimizations
-
-- **Debounced scroll events** for smooth performance
-- **Optimized animations** using CSS transforms
-- **Lazy loading** for better initial load times
-- **Minified assets** for production
-- **Efficient DOM manipulation** with event delegation
-
-## 🌟 Accessibility Features
-
-- **ARIA labels** for screen readers
-- **Keyboard navigation** support
-- **Focus management** for interactive elements
-- **Semantic HTML** structure
-- **Color contrast** compliance
-- **Alt text** for images
-
-## 📊 SEO Features
-
-- **Meta tags** for search engines
-- **Open Graph** for social media sharing
-- **Twitter Cards** for Twitter sharing
-- **Structured data** markup
-- **Sitemap** ready structure
-
-## 🚀 Deployment
-
-### GitHub Pages (Recommended)
-1. Push your code to GitHub
-2. Enable GitHub Pages in repository settings
-3. Your site will be available at `https://username.github.io/repository-name`
-
-### Other Hosting Options
-- **Netlify**: Drag and drop deployment
-- **Vercel**: Git-based deployment
-- **Firebase Hosting**: Google's hosting solution
-- **Traditional hosting**: Upload files to any web server
-
-## 📈 Analytics & Monitoring
-
-Consider adding:
-- Google Analytics for visitor tracking
-- Google Search Console for SEO monitoring
-- Uptime monitoring for reliability
-- Performance monitoring tools
-
-## 🤝 Contributing
-
-Feel free to:
-- Report bugs or issues
-- Suggest new features
-- Submit pull requests
-- Share feedback and improvements
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 📞 Contact
-
-- **Email**: zngwenya023@student.wethinkcode.co.za
-- **LinkedIn**: [Zanethemba Ngwenya](https://www.linkedin.com/in/zanethemba-ngwenya)
-- **GitHub**: [Zanethemba-Ngwenya](https://github.com/Zanethemba-Ngwenya)
-
----
-
-**Built with ❤️ and ☕ by Zanethemba Ngwenya**
-
-*Last updated: January 2025*
+If this role values initiative and delivery, I’m ready to contribute from day one. Reach out: [zngwenya023@student.wethinkcode.co.za](mailto:zngwenya023@student.wethinkcode.co.za).
